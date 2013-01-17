@@ -37,7 +37,7 @@ test = (callback) ->
     '--require'
     'should'
     '--require'
-    './server'
+    './app'
   ]
   try
     cmd = which.sync 'mocha' 
