@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "education": {
+      "id"   : "education",
+      "title": "Education",
+      "items": {
+        "brown": {
+          "id": "brown",
+          "title": "Brown University",
+          "place": "Providence, RI",
+          "subtitle": "Sc.B. in Mathematics&#8212Computer Science",
+          "date": "May, 2013 (expected)",
+          "desc": "Yo"
+        },
+        "dalton": {
+          "title": "The Dalton School"
+        }
+      }
+    }
+  }
+}
