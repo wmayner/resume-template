@@ -1,0 +1,10 @@
+mixin renderResumeSection(sec)
+  include renderResumeItem
+  section(id=sec.id)
+    .row
+      .page-header
+        h2= sec.title
+    unless typeof sec.items === undefined
+      for item in sec.items
+        unless typeof item === undefined
+          +renderResumeItem(item)

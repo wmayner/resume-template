@@ -1,0 +1,32 @@
+//- resume item (i.e. a school, job, etc.)
+//-   takes an object that has a `title` property, and any of these 
+//-   optional properties: place, position, date, description
+mixin renderResumeItem(item)
+  include linkBadge
+  fullSpan  = "span12"
+  leftSpan  = "span8"
+  rightSpan = "span4"
+  .resume-item(id=item.id)
+    .row
+      //- if no place, just put title
+      if !(typeof item.place === "undefined")
+        div(class=leftSpan)
+          h4.title!= item.title
+        div(class=rightSpan)
+          h4.pull-right.hidden-phone!= item.place
+      else
+        div(class=fullSpan)!= item.title
+    .row
+      if !(typeof item.subtitle === "undefined" && typeof item.date === "undefined")
+        //- if no position, put description below title
+        if !(typeof item.subtitle === "undefined")
+          div(class=leftSpan)!= item.subtitle
+        else
+          div(class=leftSpan)!= item.description
+        //- pull date right if it exists
+        if (typeof item.date === "undefined")
+          div(class=rightSpan)!= item.date
+      else if !(typeof item.desc == "undefined")
+        //- no position or date, so put description below title
+        div(class=fullSpan)!= item.desc
+

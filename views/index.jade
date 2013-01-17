@@ -1,5 +1,24 @@
 extends layout
-
 block content
-  h1= title
-  p Welcome to #{title}
+
+  include mixins/renderResumeSection.jade
+
+  .container
+    header.hero
+      .row
+        .span12.center
+          h1.display-name
+            strong= settings.displayName
+          span
+            address
+              a(href="http://"+settings.homepage)= settings.homepage
+              br
+              a(href="mailto:"+settings.email)= settings.email
+              br
+              p= settings.phone
+    for sec in sections
+      //- render sections
+      +renderResumeSection(sec)
+      //- and their resume items
+      - console.log(sec.items)
+      - console.log("DONE")

@@ -1,7 +1,27 @@
-doctype 5
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+!!! 5
+//if lt IE 7 ]><html class="ie ie6" lang="en">
+//if IE 7 ]><html class="ie ie7" lang="en">
+//if IE 8 ]>
+  script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+  <html class="ie ie8" lang="en">
+// [if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]
+
+head
+  meta(charset="utf-8")
+  title= settings.title
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(name='description', content=settings.title)
+  meta(name='author', content=settings.name)
+
+  // CSS
+  link(rel='stylesheet', href='/stylesheets/custom.css' + cachebust)
+  
+  // favicon
+  link(rel="shortcut icon", href="/public/favicon.ico")
+
+body
+  block content
+
+  script(src='/javascripts/googleAnalytics.js')
+
+| </html>
