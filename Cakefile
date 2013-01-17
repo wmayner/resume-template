@@ -25,7 +25,7 @@ execCoffee = (options, callback) ->
 
 # Compiles app.coffee and src directory to the app directory
 build = (callback) ->
-  execCoffee ['-c','-b', '-o', '.', 'src/*.coffee'], (callback)
+  execCoffee ['-c','-b', '-o', '.', 'src/app.coffee'], (callback)
   execCoffee ['-c','-b', '-o', 'routes', 'src/routes'], (callback)
 
 # mocha test
@@ -77,7 +77,7 @@ task 'test', 'Run Mocha tests', ->
 task 'dev', 'start dev env', ->
   build -> log ":)", green
   # watch_coffee in src/app
-  execCoffee ['-c','-b', '-w', '-o', '.', 'src/*.coffee'],
+  execCoffee ['-c','-b', '-w', '-o', '.', 'src/app.coffee'],
     log 'Watching coffee files in src/app', green
   execCoffee ['-c', '-b', '-w', '-o', 'routes', 'src/routes'],
     log 'Watching coffee files in src/routes', green
