@@ -8,7 +8,7 @@
     , "jade": "*"
     , "markdown": "0.3.1"
     , "which": "*"
-    , "less-middleware": "*"
+    , "bootstrap": "git+https://github.com/twitter/bootstrap.git#master"
   }
   , "scripts": {
       "install": "node node_modules/coffee-script/bin/cake build"
