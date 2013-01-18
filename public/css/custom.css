@@ -1,0 +1,119 @@
+@import url(http://fonts.googleapis.com/css?family=Gentium+Basic|Gentium+Book+Basic:400,400italic|Merriweather:400,400italic,700|Droid+Sans+Mono);
+/* Use Google Web Fonts */
+/* Hacky way to prevent navbar from obscuring headers when jumping to # anchor */
+section {
+  padding-top: 40px;
+  margin-top: -40px;
+}
+body {
+  /* space for the navbar */
+
+  -webkit-transition: 0.1s ease;
+  -moz-transition: 0.1s ease;
+  -o-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+ul {
+  margin-bottom: 0;
+}
+a {
+  color: #0077ff;
+  text-decoration: none;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+a:focus {
+  color: #0cf2f2;
+  text-decoration: underline;
+}
+a:hover {
+  color: #0900b5;
+  text-decoration: underline;
+}
+a:active {
+  color: #0cf2f2;
+  text-decoration: underline;
+  -webkit-transition: 0.1s ease;
+  -moz-transition: 0.1s ease;
+  -o-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+/* TODO: finish fancy border hover effects with jQuery
+ * a.img
+ *   display              : inline-block
+ *   -webkit-box-sizing   : border-box
+ *   -moz-box-sizing      : border-box
+ *   box-sizing           : border-box
+ *   width                : 100px
+ *   height               : 100px
+ *   -webkit-border-radius: 50px
+ *   -moz-border-radius   : 50px
+ *   border-radius        : 5px
+ *   border-width         : 50px
+ *   border-color         : rgba(0,0,0,0)
+ *   border-style         : dashed
+ *   &:link
+ *   &:visited
+ *   &:focus
+ *     text-decoration: none
+ *   &:hover
+ *     text-decoration: none
+ *     border-width   : 0
+ *     border-color   : rgba(0,0,0,0.5)
+ *   &:active
+ *     color: #0CF2F2
+ *     -webkit-transition: 0.1s ease
+ *     -moz-transition   : 0.1s ease
+ *     -o-transition     : 0.1s ease
+ *     transition        : 0.1s ease */
+address {
+  font-size: 18px;
+  line-height: 1.5em;
+  margin-bottom: 2em;
+}
+.center {
+  text-align: center;
+}
+.blob {
+  padding-top: 10px;
+}
+.mono-font {
+  font-family: "Droid Sans Mono", Monaco, monospace;
+}
+.title-name {
+  font-family: "Gentium Basic", Georgia, serif;
+  font-size: 50px;
+  letter-spacing: 0.5em;
+  padding: 10px 0px;
+  margin-right: -0.5em;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  line-height: 1.2em;
+}
+.date-range {
+  font-family: "Merriweather", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+.position,
+.project {
+  margin-bottom: 40px;
+}
+.position-title,
+.project-title {
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+.page-header {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
