@@ -1,19 +1,35 @@
 {
   "sections": {
     "education": {
-      "id"   : "education",
-      "title": "Education",
-      "items": {
+      "id"   : "education"
+    , "title": "Education"
+    , "items": {
         "brown": {
-          "id": "brown",
-          "title": "Brown University",
-          "place": "Providence, RI",
-          "subtitle": "Sc.B. in Mathematics&#8212Computer Science",
-          "date": "May, 2013 (expected)",
-          "desc": "Yo"
-        },
-        "dalton": {
-          "title": "The Dalton School"
+          "id": "brown"
+        , "title": "Brown University"
+        , "place": "Providence, RI"
+        , "subtitle": "Sc.B. in Mathematics&#8212Computer Science"
+        , "date": "May, 2013 (expected)"
+        , "desc": "test: <ul> <li> hi </li> </ul>"
+        }
+      , "dalton": {
+          "id": "dalton"
+        , "title": "The Dalton School"
+        , "place": "New York, NY"
+        }
+      }
+    }
+  , "experience": {
+      "id": "experience"
+    , "title": "Professional Experience"
+    , "items": {
+        "reu": {
+          "id": "reu"
+        , "title": "Research Experience for Undergraduates in Computational Mathematics"
+        , "place": "Chicago, IL"
+        , "subtitle": "Researcher"
+        , "date": "Summer 2012"
+        , "desc": "descruprturrn"
         }
       }
     }
