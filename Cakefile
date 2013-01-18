@@ -25,8 +25,9 @@ execCoffee = (options, callback) ->
 
 # Compiles app.coffee and src directory to the app directory
 build = (callback) ->
-  execCoffee ['-c','-b', '-o', '.', 'src/app.coffee'], (callback)
-  execCoffee ['-c','-b', '-o', 'routes', 'src/routes'], (callback)
+  execCoffee ['-c','-b', '-o', '.', 'src/app.coffee'],
+  execCoffee ['-c','-b', '-o', 'routes', 'src/routes'],
+  (callback)
 
 # mocha test
 test = (callback) ->
