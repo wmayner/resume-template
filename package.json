@@ -22,6 +22,7 @@
     , "supervisor": "*"
     , "docco": "*"
     , "supertest": "*"
+    , "nodewatch": "*"
   }
   , "engines": {
       "node": "~0.8.x"

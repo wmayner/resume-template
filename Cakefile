@@ -2,6 +2,7 @@ fs            = require 'fs'
 {print}       = require 'util'
 which         = require 'which'
 {spawn, exec} = require 'child_process'
+watch         = require 'nodewatch'
 
 # ANSI Terminal Colors
 bold  = '\x1B[0;1m'
@@ -23,11 +24,20 @@ execCoffee = (options, callback) ->
   coffee.stderr.pipe process.stderr
   coffee.on 'exit', (status) -> callback?() if status is 0
 
+buildLess = (callback) ->
+  exec 'lessc src/less/custom.less public/css/custom.css', (err, stdout, stderr) ->
+    err && throw err
+    log 'less compiled!', green
+    callback?()
+
 # Compiles app.coffee and src directory to the app directory
+buildCoffee = (callback) ->
+  execCoffee ['-c','-b', '-o', '.', 'src/app.coffee']
+  execCoffee ['-c','-b', '-o', 'routes', 'src/routes']
+  callback?()
+
 build = (callback) ->
-  execCoffee ['-c','-b', '-o', '.', 'src/app.coffee'],
-  execCoffee ['-c','-b', '-o', 'routes', 'src/routes'],
-  (callback)
+  buildCoffee -> buildLess -> callback?()
 
 # mocha test
 test = (callback) ->
@@ -77,13 +87,20 @@ task 'test', 'Run Mocha tests', ->
 
 task 'dev', 'start dev env', ->
   build -> log ":)", green
-  # watch_coffee in src/app
+  # watch coffee in src
   execCoffee ['-c','-b', '-w', '-o', '.', 'src/app.coffee'],
     log 'Watching coffee files in src/app', green
   execCoffee ['-c', '-b', '-w', '-o', 'routes', 'src/routes'],
     log 'Watching coffee files in src/routes', green
+  # watch less in src/less
+  watch.add("./src/less", true).onChange((file,prev,curr,action) ->
+    console.log(file)
+    ext = path.extname(file).substr(1)
+    if ext == 'less'
+      invoke 'less:compile'
+  )
   # watch_js
-  supervisor = spawn 'node', ['./node_modules/supervisor/lib/cli-wrapper.js','-w','app,views,data,routes', '-e', 'js|jade|json', 'app']
+  supervisor = spawn 'node', ['./node_modules/supervisor/lib/cli-wrapper.js','-w','views,data,routes,public', '-e', 'js|jade|json|css', 'app']
   supervisor.stdout.pipe process.stdout
   supervisor.stderr.pipe process.stderr
-  log 'Watching js, jade, and json files and running app', green
+  log 'Watching js, jade, json, and css files and running app', green

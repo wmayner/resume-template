@@ -8,6 +8,7 @@ section {
 body {
   /* space for the navbar */
 
+  font-family: 'Merriweather', Georgia, serif;
   -webkit-transition: 0.1s ease;
   -moz-transition: 0.1s ease;
   -o-transition: 0.1s ease;
@@ -48,7 +49,7 @@ a:active {
   transition: 0.1s ease;
 }
 /* TODO: finish fancy border hover effects with jQuery
- * a.img
+ * a.img {
  *   display              : inline-block
  *   -webkit-box-sizing   : border-box
  *   -moz-box-sizing      : border-box
@@ -74,7 +75,8 @@ a:active {
  *     -webkit-transition: 0.1s ease
  *     -moz-transition   : 0.1s ease
  *     -o-transition     : 0.1s ease
- *     transition        : 0.1s ease */
+ *     transition        : 0.1s ease
+ * } */
 address {
   font-size: 18px;
   line-height: 1.5em;
@@ -89,7 +91,7 @@ address {
 .mono-font {
   font-family: "Droid Sans Mono", Monaco, monospace;
 }
-.title-name {
+.display-name {
   font-family: "Gentium Basic", Georgia, serif;
   font-size: 50px;
   letter-spacing: 0.5em;
@@ -99,21 +101,20 @@ address {
   margin-top: 60px;
   line-height: 1.2em;
 }
-.date-range {
+.page-header {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.resume-item .title {
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+.resume-item .date {
   font-family: "Merriweather", Georgia, serif;
   font-style: italic;
   font-weight: 400;
 }
-.position,
-.project {
+.resume-item .subtitle,
+.resume-item .project {
   margin-bottom: 40px;
-}
-.position-title,
-.project-title {
-  margin-top: 0px;
-  margin-bottom: 3px;
-}
-.page-header {
-  margin-bottom: 30px;
-  margin-top: 20px;
 }
