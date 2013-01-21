@@ -3,6 +3,7 @@ fs            = require 'fs'
 which         = require 'which'
 {spawn, exec} = require 'child_process'
 watch         = require 'nodewatch'
+path          = require 'path'
 
 # ANSI Terminal Colors
 bold  = '\x1B[0;1m'
@@ -97,7 +98,7 @@ task 'dev', 'start dev env', ->
     console.log(file)
     ext = path.extname(file).substr(1)
     if ext == 'less'
-      invoke 'less:compile'
+      buildLess
   )
   # watch_js
   supervisor = spawn 'node', ['./node_modules/supervisor/lib/cli-wrapper.js','-w','views,data,routes,public', '-e', 'js|jade|json|css', 'app']

@@ -23,6 +23,7 @@
     , "docco": "*"
     , "supertest": "*"
     , "nodewatch": "*"
+    , "path": "*"
   }
   , "engines": {
       "node": "~0.8.x"
