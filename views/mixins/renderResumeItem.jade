@@ -6,27 +6,84 @@ mixin renderResumeItem(item)
   fullSpan  = "span12"
   leftSpan  = "span8"
   rightSpan = "span4"
+
+  hasSubtitle = typeof item.subtitle !== "undefined"
+  hasDate     = typeof item.date     !== "undefined"
+  hasPlace    = typeof item.place    !== "undefined"
+  hasDesc     = typeof item.desc     !== "undefined"
+
   .resume-item(id=item.id)
-    .row
-      //- if no place, just put title
-      if !(typeof item.place === "undefined")
+    if (hasPlace && hasDate && hasSubtitle && hasDesc)
+      .row.title-row
         div(class=leftSpan)
           h4.title!= item.title
         div(class=rightSpan)
-          h4.pull-right.hidden-phone!= item.place
-      else
-        div(class=fullSpan)!= item.title
-    .row
-      if !(typeof item.subtitle === "undefined" && typeof item.date === "undefined")
-        //- if no position, put description below title
-        if !(typeof item.subtitle === "undefined")
-          div(class=leftSpan)!= item.subtitle
-        else
-          div(class=leftSpan)!= item.description
-        //- pull date right if it exists
-        if (typeof item.date === "undefined")
-          div(class=rightSpan)!= item.date
-      else if !(typeof item.desc == "undefined")
-        //- no position or date, so put description below title
+          h4.pull-right.hidden-phone.place!= item.place
+      .row.subtitle-row
+        div(class=leftSpan)
+          span.subtitle!= item.subtitle
+        div(class=rightSpan)
+          span.hidden-phone.pull-right.date!= item.date
+          span.visible-phone.label.date!= item.date
+      .row.desc-row
         div(class=fullSpan)!= item.desc
-
+    else if (hasPlace &&            hasSubtitle && hasDesc)
+      .row.title-row
+        div(class=leftSpan)
+          h4.title!= item.title
+        div(class=rightSpan)
+          h4.pull-right.hidden-phone.place!= item.place
+      .row.subtitle-row
+        div(class=fullSpan)
+          span.subtitle!= item.subtitle
+      .row.desc-row
+        div(class=fullSpan)!= item.desc
+    else if (hasPlace && hasDate &&                hasDesc)
+      .row.title-row
+        div(class=leftSpan)
+          h4.title!= item.title
+        div(class=rightSpan)
+          h4.pull-right.hidden-phone.place!= item.place
+      .row.subtitle-row
+        div(class=leftSpan)!= item.desc
+        div(class=rightSpan)
+          span.hidden-phone.pull-right.date!= item.date
+          span.visible-phone.label.date!= item.date
+    else if (            hasDate && hasSubtitle && hasDesc)
+      .row.title-row
+        div(class=leftSpan)
+          h4.title!= item.title
+        div(class=rightSpan)
+          span.hidden-phone.pull-right.date!= item.date
+          span.visible-phone.label.date!= item.date
+      .row.subtitle-row
+        div(class=fullSpan)
+          span.subtitle!= item.subtitle
+      .row.desc-row
+        div(class=fullSpan)!= item.desc
+    else if (                       hasSubtitle && hasDesc)
+      .row.title-row
+        div(class=fullSpan)
+          h4.title!= item.title
+      .row.subtitle-row
+        div(class=fullSpan)
+          span.subtitle!= item.subtitle
+      .row.desc-row
+        div(class=fullSpan)!= item.desc
+    else if (            hasDate &&                hasDesc)
+      .row.title-row
+        div(class=leftSpan)
+          h4.title!= item.title
+        div(class=rightSpan)
+          span.hidden-phone.pull-right.date!= item.date
+          span.visible-phone.label.date!= item.date
+      .row.desc-row
+        div(class=fullSpan)!= item.desc
+    else if (hasPlace &&                           hasDesc)
+      .row.title-row
+        div(class=leftSpan)
+          h4.title!= item.title
+        div(class=rightSpan)
+          h4.pull-right.hidden-phone.place!= item.place
+      .row.desc-row
+        div(class=fullSpan)!= item.desc

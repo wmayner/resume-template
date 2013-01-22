@@ -16,6 +16,8 @@
 @sectionHeaderStyle : normal;
 @sectionHeaderWeight: 400;
 
+@itemTitleWeight: 400;
+
 @linkBaseColor  : #0077ff;
 @linkHoverColor : #0900b5;
 @linkActiveColor: #0cf2f2;
@@ -50,6 +52,10 @@ h2 {
   font-weight  : @sectionHeaderWeight;
 }
 
+h4 {
+  font-weight :@itemTitleWeight;
+}
+
 ul {
   margin-bottom: 0;
 }
@@ -78,6 +84,64 @@ a {
     -moz-transition   : 0.1s ease;
     -o-transition     : 0.1s ease;
     transition        : 0.1s ease;
+  }
+}
+
+address {
+  font-size    : 18px;
+  line-height  : 1.5em;
+  margin-bottom: 2em;
+}
+
+.center {
+  text-align: center;
+}
+
+.mono-font {
+  font-family: @monoFont;
+}
+
+.display-name {
+  font-family   : @displayFont;
+  font-size     : 50px;
+  letter-spacing: @nameKerning;
+  padding       : 10px 0px;
+  margin-right  : -@nameKerning;
+  margin-bottom : 60px;
+  margin-top    : 60px;
+  line-height   : 1.2em;
+}
+
+.page-header {
+  margin-bottom: 30px;
+  margin-top   : 20px;
+}
+
+.resume-item {
+  .title-row {
+    margin-top   : 0px;
+    margin-bottom: 3px;
+    font-weight :@itemTitleWeight;
+  }
+  .title {
+    font-weight :@itemTitleWeight;
+  }
+  .place {
+    margin: 0;
+  }
+  .date /* when viewport is large, italicize date ranges and use different font */ {
+    font-family: @dateRangeFont;
+    font-style : @dateRangeStyle;
+    font-weight: @dateRangeWeight;
+  }
+  .subtitle {
+    font-style: italic;
+  }
+  .subtitle, .project {
+    margin-bottom: 40px;
+  }
+  .blob {
+    padding-top: 10px;
   }
 }
 
@@ -111,51 +175,3 @@ a {
  *     transition        : 0.1s ease
  * } */
 
-address {
-  font-size    : 18px;
-  line-height  : 1.5em;
-  margin-bottom: 2em;
-}
-
-.center {
-  text-align: center;
-}
-
-.blob {
-  padding-top: 10px;
-}
-
-.mono-font {
-  font-family: @monoFont;
-}
-
-.display-name {
-  font-family   : @displayFont;
-  font-size     : 50px;
-  letter-spacing: @nameKerning;
-  padding       : 10px 0px;
-  margin-right  : -@nameKerning;
-  margin-bottom : 60px;
-  margin-top    : 60px;
-  line-height   : 1.2em;
-}
-
-.page-header {
-  margin-bottom: 30px;
-  margin-top   : 20px;
-}
-
-.resume-item {
-  .title {
-    margin-top   : 0px;
-    margin-bottom: 3px;
-  }
-  .date /* when viewport is large, italicize date ranges and use different font */ {
-    font-family: @dateRangeFont;
-    font-style : @dateRangeStyle;
-    font-weight: @dateRangeWeight;
-  }
-  .subtitle, .project {
-    margin-bottom: 40px;
-  }
-}

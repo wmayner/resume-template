@@ -21,6 +21,9 @@ h2 {
   font-style: normal;
   font-weight: 400;
 }
+h4 {
+  font-weight: 400;
+}
 ul {
   margin-bottom: 0;
 }
@@ -47,6 +50,57 @@ a:active {
   -moz-transition: 0.1s ease;
   -o-transition: 0.1s ease;
   transition: 0.1s ease;
+}
+address {
+  font-size: 18px;
+  line-height: 1.5em;
+  margin-bottom: 2em;
+}
+.center {
+  text-align: center;
+}
+.mono-font {
+  font-family: "Droid Sans Mono", Monaco, monospace;
+}
+.display-name {
+  font-family: "Gentium Basic", Georgia, serif;
+  font-size: 50px;
+  letter-spacing: 0.5em;
+  padding: 10px 0px;
+  margin-right: -0.5em;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  line-height: 1.2em;
+}
+.page-header {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.resume-item .title-row {
+  margin-top: 0px;
+  margin-bottom: 3px;
+  font-weight: 400;
+}
+.resume-item .title {
+  font-weight: 400;
+}
+.resume-item .place {
+  margin: 0;
+}
+.resume-item .date {
+  font-family: "Merriweather", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+.resume-item .subtitle {
+  font-style: italic;
+}
+.resume-item .subtitle,
+.resume-item .project {
+  margin-bottom: 40px;
+}
+.resume-item .blob {
+  padding-top: 10px;
 }
 /* TODO: finish fancy border hover effects with jQuery
  * a.img {
@@ -77,44 +131,3 @@ a:active {
  *     -o-transition     : 0.1s ease
  *     transition        : 0.1s ease
  * } */
-address {
-  font-size: 18px;
-  line-height: 1.5em;
-  margin-bottom: 2em;
-}
-.center {
-  text-align: center;
-}
-.blob {
-  padding-top: 10px;
-}
-.mono-font {
-  font-family: "Droid Sans Mono", Monaco, monospace;
-}
-.display-name {
-  font-family: "Gentium Basic", Georgia, serif;
-  font-size: 50px;
-  letter-spacing: 0.5em;
-  padding: 10px 0px;
-  margin-right: -0.5em;
-  margin-bottom: 60px;
-  margin-top: 60px;
-  line-height: 1.2em;
-}
-.page-header {
-  margin-bottom: 30px;
-  margin-top: 20px;
-}
-.resume-item .title {
-  margin-top: 0px;
-  margin-bottom: 3px;
-}
-.resume-item .date {
-  font-family: "Merriweather", Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-}
-.resume-item .subtitle,
-.resume-item .project {
-  margin-bottom: 40px;
-}
