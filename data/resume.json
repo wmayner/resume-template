@@ -10,12 +10,14 @@
         , "place": "Providence, RI"
         , "subtitle": "Sc.B. in Mathematics&#8212Computer Science"
         , "date": "May, 2013 (expected)"
-        , "desc": "test: <ul> <li> hi </li> </ul>"
+        , "desc": "<span><strong>Relevant Coursework: </strong></span> Design and Analysis of Algorithms; Multiprocessor Synchronization; Cryptography; Cybersecurity and International Relations; Programming with Data Structures and Algorithms; Models of Computation; Fundamental Problems of Geometry; Combinatorial Topology; Abstract Algebra; and Linear Algebra"
         }
       , "dalton": {
           "id": "dalton"
         , "title": "The Dalton School"
         , "place": "New York, NY"
+        , "date": "2001-2009"
+        , "desc": "<ul><li>Member of ACSL Computer Science Team</li><li>National Merit semifinalist</li>"
         }
       }
     }
@@ -25,11 +27,51 @@
     , "items": {
         "reu": {
           "id": "reu"
-        , "title": "Research Experience for Undergraduates in Computational Mathematics"
+        , "title": "<a href='http://math.iit.edu/~openscholar/meshfree/event/reu-iit'>Research Experience for Undergraduates in Computational Mathematics</a>"
         , "place": "Chicago, IL"
         , "subtitle": "Researcher"
         , "date": "Summer 2012"
-        , "desc": "descruprturrn"
+        , "desc": "<ul> <li>Studied a novel 2-parameter family of kernel functions for data interpolation, under the direction of Greg Fasshauer, Ph.D, Professor of Applied Mathematics at the Illinois Institute of Technology</li> <li>Contributed to a code repository of numerical experiments in Matlab</li> <li>Conducted theoretical investigations of closed forms for Green&#8217s functions associated with the 2-parameter family</li> <li>Presented results at the <a href='http://www.ymc.osu.edu/' target='_blank'>Young Mathematicians Conference</a> at Ohio State University; our abstract was one of 55 accepted out of 110 submitted</li> <li>Abstract has been accepted for the upcoming <a href='http://jointmathematicsmeetings.org/' target='_blank'>Joint Mathematics Meetings</a> in San Diego, CA <li>Research funded by NSF grant DMS-1115392</li> </ul>"
+        }
+      , "penobscot": {
+          "id": "penobscot"
+        , "title": "Penobscot Management, LLC"
+        , "place": "Schaumburg, IL"
+        , "subtitle": "Real Estate Management Intern"
+        , "date": "June 2011"
+        , "desc": "<ul> <li>Leased apartments and participated in management meetings in the Sales and Management office of a 6-building midrise property</li> <li>Proposed an alteration to one of the buildings on the property that resulted in a $70,000 investment by the owner, with an additional $140,000 allocated for two additional buildings.</li> </ul>"
+        }
+      }
+    }
+  , "projects": {
+      "title": "Projects"
+    , "items": {
+        "splitr": {
+          "id": "splitr"
+        , "title": "splitr.co"
+        , "date": "January 2013 (expected)"
+        , "desc": "Beginning development of a web app to divide things fairly among friends"
+        }
+      , "paper": {
+          "id": "paper"
+        , "title": "A 2-Parameter Family of Kernels for Data Interpolation"
+        , "desc": "Coauthoring a paper with my research partner from the REU program at IIT for submission to the Society for Industrial and Applied Mathematics (SIAM) journal"
+        }
+      }
+    }
+  , "skillbars": {
+      "title": "Projects"
+    , "items": {
+        "splitr": {
+          "id": "splitr"
+        , "title": "splitr.co"
+        , "date": "January 2013 (expected)"
+        , "desc": "Beginning development of a web app to divide things fairly among friends"
+        }
+      , "paper": {
+          "id": "paper"
+        , "title": "A 2-Parameter Family of Kernels for Data Interpolation"
+        , "desc": "Coauthoring a paper with my research partner from the REU program at IIT for submission to the Society for Industrial and Applied Mathematics (SIAM) journal"
         }
       }
     }
