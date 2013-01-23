@@ -1,5 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Gentium+Basic|Gentium+Book+Basic:400,400italic|Merriweather:400,400italic,700|Droid+Sans+Mono);
 /* Use Google Web Fonts */
+/* Typography */
+/* Colors */
+/* Spacing */
 /* Hacky way to prevent navbar from obscuring headers when jumping to # anchor */
 section {
   padding-top: 40px;
@@ -22,6 +25,7 @@ h2 {
   font-weight: 400;
 }
 h4 {
+  margin: 0 0 5px 0;
   font-weight: 400;
 }
 ul {
@@ -76,6 +80,9 @@ address {
   margin-bottom: 30px;
   margin-top: 20px;
 }
+.resume-item {
+  margin-bottom: 25px;
+}
 .resume-item .title-row {
   margin-top: 0px;
   margin-bottom: 3px;
@@ -97,10 +104,19 @@ address {
 }
 .resume-item .subtitle,
 .resume-item .project {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
-.resume-item .blob {
-  padding-top: 10px;
+.resume-item .desc-row .span12,
+.resume-item .desc-row .span8,
+.resume-item .desc-row .span4 {
+  margin-top: 10px;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+.resume-item .desc-row .span12 .hidden-phone,
+.resume-item .desc-row .span8 .hidden-phone,
+.resume-item .desc-row .span4 .hidden-phone {
+  margin-left: 30px;
 }
 /* TODO: finish fancy border hover effects with jQuery
  * a.img {

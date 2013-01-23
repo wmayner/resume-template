@@ -1,6 +1,8 @@
 /* Use Google Web Fonts */
 @import url(http://fonts.googleapis.com/css?family=Gentium+Basic|Gentium+Book+Basic:400,400italic|Merriweather:400,400italic,700|Droid+Sans+Mono);
 
+/* Typography */
+
 @displayFont: "Gentium Basic", Georgia, serif;
 @bodyFont   : "Merriweather", Georgia, serif;
 @altFont    : "Gentium Book Basic", Georgia, serif;
@@ -18,15 +20,21 @@
 
 @itemTitleWeight: 400;
 
+@linkBaseDecoration  : none;
+@linkHoverDecoration : underline;
+@linkActiveDecoration: underline;
+@linkFocusDecoration : underline;
+
+/* Colors */
+
 @linkBaseColor  : #0077ff;
 @linkHoverColor : #0900b5;
 @linkActiveColor: #0cf2f2;
 @linkFocusColor : @linkActiveColor;
 
-@linkBaseDecoration  : none;
-@linkHoverDecoration : underline;
-@linkActiveDecoration: underline;
-@linkFocusDecoration : underline;
+/* Spacing */
+
+@itemSpacing: 25px;
 
 /* Hacky way to prevent navbar from obscuring headers when jumping to # anchor */
 section {
@@ -53,6 +61,7 @@ h2 {
 }
 
 h4 {
+  margin: 0 0 5px 0;
   font-weight :@itemTitleWeight;
 }
 
@@ -118,6 +127,7 @@ address {
 }
 
 .resume-item {
+  margin-bottom: @itemSpacing;
   .title-row {
     margin-top   : 0px;
     margin-bottom: 3px;
@@ -138,10 +148,17 @@ address {
     font-style: italic;
   }
   .subtitle, .project {
-    margin-bottom: 40px;
+    margin-bottom: @itemSpacing;
   }
-  .blob {
-    padding-top: 10px;
+  .desc-row {
+    .span12, .span8, .span4 {
+      margin-top: 10px;
+      margin-right: 0;
+      margin-bottom: 10px;
+      .hidden-phone {
+        margin-left: 30px;
+      }
+    }
   }
 }
 
@@ -174,4 +191,3 @@ address {
  *     -o-transition     : 0.1s ease
  *     transition        : 0.1s ease
  * } */
-
