@@ -32,9 +32,11 @@
 @linkActiveColor: #0cf2f2;
 @linkFocusColor : @linkActiveColor;
 
+@labelBackgroundColor: #bbb;
+
 /* Spacing */
 
-@itemSpacing: 25px;
+@itemSpacing: 30px;
 
 /* Hacky way to prevent navbar from obscuring headers when jumping to # anchor */
 section {
@@ -61,7 +63,7 @@ h2 {
 }
 
 h4 {
-  margin: 0 0 5px 0;
+  margin: 0;
   font-weight :@itemTitleWeight;
 }
 
@@ -124,13 +126,14 @@ address {
 .page-header {
   margin-bottom: 30px;
   margin-top   : 20px;
+  padding-bottom: 5px;
 }
 
 .resume-item {
   margin-bottom: @itemSpacing;
   .title-row {
     margin-top   : 0px;
-    margin-bottom: 3px;
+    margin-bottom: 0px;
     font-weight :@itemTitleWeight;
   }
   .title {
@@ -144,17 +147,21 @@ address {
     font-style : @dateRangeStyle;
     font-weight: @dateRangeWeight;
   }
-  .subtitle {
-    font-style: italic;
+  .date.visible-phone.label {
+      background: @labelBackgroundColor;
+      margin: 5px 0;
+      padding: 4px 4px 2px 4px;
   }
-  .subtitle, .project {
-    margin-bottom: @itemSpacing;
+  .subtitle-row {
+    margin-top: 7px;
+  }
+  .subtitle { 
+    font-style: italic;
   }
   .desc-row {
     .span12, .span8, .span4 {
-      margin-top: 10px;
       margin-right: 0;
-      margin-bottom: 10px;
+      margin-top: 7px;
       .hidden-phone {
         margin-left: 30px;
       }

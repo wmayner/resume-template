@@ -25,7 +25,7 @@ h2 {
   font-weight: 400;
 }
 h4 {
-  margin: 0 0 5px 0;
+  margin: 0;
   font-weight: 400;
 }
 ul {
@@ -79,13 +79,14 @@ address {
 .page-header {
   margin-bottom: 30px;
   margin-top: 20px;
+  padding-bottom: 5px;
 }
 .resume-item {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 .resume-item .title-row {
   margin-top: 0px;
-  margin-bottom: 3px;
+  margin-bottom: 0px;
   font-weight: 400;
 }
 .resume-item .title {
@@ -99,19 +100,22 @@ address {
   font-style: italic;
   font-weight: 400;
 }
+.resume-item .date.visible-phone.label {
+  background: #bbbbbb;
+  margin: 5px 0;
+  padding: 4px 4px 2px 4px;
+}
+.resume-item .subtitle-row {
+  margin-top: 7px;
+}
 .resume-item .subtitle {
   font-style: italic;
-}
-.resume-item .subtitle,
-.resume-item .project {
-  margin-bottom: 25px;
 }
 .resume-item .desc-row .span12,
 .resume-item .desc-row .span8,
 .resume-item .desc-row .span4 {
-  margin-top: 10px;
   margin-right: 0;
-  margin-bottom: 10px;
+  margin-top: 7px;
 }
 .resume-item .desc-row .span12 .hidden-phone,
 .resume-item .desc-row .span8 .hidden-phone,
