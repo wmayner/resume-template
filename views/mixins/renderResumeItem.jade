@@ -44,9 +44,12 @@ mixin renderResumeItem(item)
           h4.title!= item.title
         div(class=rightSpan)
           h4.pull-right.hidden-phone.place!= item.place
-      .row.desc-row
+      .row.desc-row.hidden-phone
+        div(class=leftSpan)!= item.desc
         div(class=rightSpan)
-          span.hidden-phone.pull-right.date!= item.date
+          span.pull-right.date!= item.date
+      .row.desc-row.visible-phone
+        div(class=rightSpan)
           span.visible-phone.label.date!= item.date
         div(class=leftSpan)!= item.desc
     else if (            hasDate && hasSubtitle && hasDesc)
