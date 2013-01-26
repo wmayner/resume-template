@@ -23,7 +23,9 @@ Customize it
 
 ### Content ###
 
-The app renders the contents of `data/resume.json`. Each section is a property of of the `sections` object. A section has the mandatory `title` property and optional properties `place`, `date`, `subtitle`, and `desc`.
+Name and contact info are set in `src/app.coffee`.
+
+Resume content is rendered from `data/resume.json`. Each section is a property of of the `sections` object. A section has the mandatory `title` property and optional properties `place`, `date`, `subtitle`, and `desc`.
 
 `sections` has a special, optional property called `skillbars`, which is rendered differently than other sections; it must have properties of the form `"a_skill": {"Name of Skill (this will be displayed)": "<integer between 0 and 100>"`.
 
