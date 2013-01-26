@@ -6,17 +6,17 @@
     , "items": {
         "brown": {
           "id": "brown"
-        , "title": "Brown University"
+        , "title": "<a href='http://brown.edu' target='blank'>Brown University</a>"
         , "place": "Providence, RI"
-        , "subtitle": "Sc.B. in Mathematics&#8212Computer Science"
+        , "subtitle": "Sc.B. in Mathematics&#8212;Computer Science"
         , "date": "May, 2013 (expected)"
         , "desc": "<span><strong>Relevant Coursework: </strong></span> Design and Analysis of Algorithms; Multiprocessor Synchronization; Cryptography; Cybersecurity and International Relations; Programming with Data Structures and Algorithms; Models of Computation; Fundamental Problems of Geometry; Combinatorial Topology; Abstract Algebra; and Linear Algebra"
         }
       , "dalton": {
           "id": "dalton"
-        , "title": "The Dalton School"
+        , "title": "<a href='http://www.dalton.org/' target='blank'>The Dalton School</a>"
         , "place": "New York, NY"
-        , "date": "2001-2009"
+        , "date": "2001&#8211;2009"
         , "desc": "<ul><li>Member of ACSL Computer Science Team</li><li>National Merit semifinalist</li>"
         }
       }
@@ -27,19 +27,19 @@
     , "items": {
         "reu": {
           "id": "reu"
-        , "title": "<a href='http://math.iit.edu/~openscholar/meshfree/event/reu-iit'>Research Experience for Undergraduates in Computational Mathematics</a>"
+        , "title": "<a href='http://math.iit.edu/~openscholar/meshfree/event/reu-iit' target='blank'>Research Experience for Undergraduates in Computational Mathematics</a>"
         , "place": "Chicago, IL"
         , "subtitle": "Researcher"
         , "date": "Summer 2012"
-        , "desc": "<ul> <li>Studied a novel 2-parameter family of kernel functions for data interpolation, under the direction of Greg Fasshauer, Ph.D, Professor of Applied Mathematics at the Illinois Institute of Technology</li> <li>Contributed to a code repository of numerical experiments in Matlab</li> <li>Conducted theoretical investigations of closed forms for Green&#8217s functions associated with the 2-parameter family</li> <li>Presented results at the <a href='http://www.ymc.osu.edu/' target='_blank'>Young Mathematicians Conference</a> at Ohio State University; our abstract was one of 55 accepted out of 110 submitted</li> <li>Abstract has been accepted for the upcoming <a href='http://jointmathematicsmeetings.org/' target='_blank'>Joint Mathematics Meetings</a> in San Diego, CA <li>Research funded by NSF grant DMS-1115392</li> </ul>"
+        , "desc": "<ul> <li>Studied a novel 2-parameter family of kernel functions for data interpolation, under the direction of Greg Fasshauer, Ph.D, Professor of Applied Mathematics at the Illinois Institute of Technology</li> <li>Contributed to a code repository of numerical experiments in Matlab</li> <li>Conducted theoretical investigations of closed forms for Green&#8217s functions associated with the 2-parameter family</li> <li>Presented results at the <a href='http://www.ymc.osu.edu/' target='_blank'>Young Mathematicians Conference</a> at Ohio State University; our abstract was one of 55 accepted out of 110 submitted</li> <li>Presented results at the <a href='http://jointmathematicsmeetings.org/' target='_blank'>Joint Mathematics Meetings</a> in San Diego, CA <li>Research funded by NSF grant DMS-1115392</li> </ul>"
         }
       , "penobscot": {
           "id": "penobscot"
-        , "title": "Penobscot Management, LLC"
+        , "title": "<a href='http://www.linkedin.com/company/penobscot-management-llc.' target='blank'>Penobscot Management, LLC</a>"
         , "place": "Schaumburg, IL"
         , "subtitle": "Real Estate Management Intern"
         , "date": "June 2011"
-        , "desc": "<ul> <li>Leased apartments and participated in management meetings in the Sales and Management office of a 6-building midrise property</li> <li>Proposed an alteration to one of the buildings on the property that resulted in a $70,000 investment by the owner, with an additional $140,000 allocated for two additional buildings.</li> </ul>"
+        , "desc": "<ul> <li>Leased apartments and participated in management meetings in the Sales and Management office of a 6-building midrise property</li> <li>Proposed an alteration to one of the buildings on the property that resulted in a $70,000 investment by the owner, with an additional $140,000 allocated for two additional buildings</li> </ul>"
         }
       }
     }
@@ -49,7 +49,6 @@
         "splitr": {
           "id": "splitr"
         , "title": "splitr.co"
-        , "date": "January 2013 (expected)"
         , "desc": "Beginning development of a web app to divide things fairly among friends"
         }
       , "paper": {
@@ -57,13 +56,82 @@
         , "title": "A 2-Parameter Family of Kernels for Data Interpolation"
         , "desc": "Coauthoring a paper with my research partner from the REU program at IIT for submission to the Society for Industrial and Applied Mathematics (SIAM) journal"
         }
+      , "resume": {
+          "id": "resume"
+        , "title": "<a href='https://github.com/wmayner/resume' target='blank'>This Resume</a>"
+        , "desc": "As a way of practicing <code>Node + CoffeeScript + Express + Jade + Less + Bootstrap</code>, I built this resume page as an open-source Node app. The app renders resume content stored in a <span class='mono-font'>JSON</span>. Serious overkill, I know, but hey&#8230; &#8220;learn by doing!&#8221 Check out the <a href='https://github.com/wmayner/resume' target='blank'>repo on github</a>."
+        }
       }
     }
   , "skillbars": {
-      "title": "Technical Skills"
+      "id": "skillbars"
+    , "title": "Technical Skills"
     , "items": {
-        "CoffeeScript": "80"
-        , "Java": "70"
+        "coffeescript": {"title": "CoffeeScript", "level": "80"}
+      , "node": {"title": "Node.js", "level": "70"}
+      , "express": {"title": "Express", "level": "80"}
+      , "git": {"title": "git", "level": "70"}
+      , "css": {"title": "SASS/LESS/CSS", "level": "70"}
+      , "html": {"title": "HTML", "level": "80"}
+      , "jade": {"title": "Jade", "level": "60"}
+      , "bootstrap": {"title": "Bootstrap", "level": "80"}
+      , "vim": {"title": "Vim", "level": "85"}
+      , "java": {"title": "Java", "level": "75"}
+      , "scheme": {"title": "Scheme", "level": "50"}
+      , "unix": {"title": "Unix", "level": "60"}
+      , "hg": {"title": "hg", "level": "70"}
+      , "matlab": {"title": "Matlab", "level": "85"}
+      , "mathematica": {"title": "Mathematica", "level": "40"}
+      , "latex": {"title": "LaTeX", "level": "95"}
+      , "maple": {"title": "Maple", "level": "60"}
+      , "windows": {"title": "Windows", "level": "80"}
+      }
+    }
+  , "leadership": {
+      "title": "Leadership Experience"
+    , "items": {
+        "goclub": {
+          "id": "goclub"
+        , "title": "<a href='http://www.college-go.org/' target='blank'>Brown University Go Club</a>"
+        , "place": "Providence, RI"
+        , "subtitle": "Founding Member"
+        , "date": "2010&#8211;present"
+        , "desc": "<ul> <li>Go is the ancient board game of strategy and tactics, believed to be the first board game ever invented, and as yet unconquered by computer programs</li> <li>Helped found the Collegiate Go League, which to date has members from over 7 universities</li> <li>Raised funds and recruited new members</li> <li>Participated in Go tournament at M.I.T. in 2010, for the Brown University team</li> <li>Received early support from the ING Foundation, whose mission is to promote the spread of Go in Western countries"
+        }
+      , "winona": {
+          "id": "winona"
+        , "title": "<a href='http://www.winonacamps.com/' target='blank'>Winona Camps</a>"
+        , "place": "Bridgton, ME"
+        , "subtitle": "Woodworking and Riflery Counselor"
+        , "date": "Summers of 2007&#8211;2011"
+        , "desc": "<ul> <li>Held a leadership role among the staff as one of the senior counselors</li> <li>Taught campers (ages 11&#8211;13) skills in woodworking (designing a project, drawing a plan, carpentry techniques) and techniques of marksmanship</li> <li>Mentored campers, encouraging their independence and helping them develop self-confidence and social skills</li> <li>Worked closely with other counselors as a team to ensure camp activities ran smoothly</li>"
+        }
+      }
+    }
+  , "activities": {
+      "title": "Activities"
+    , "items": {
+        "piano": {
+          "title": "Piano Studies"
+        , "date": "2003&#8211;present"
+        , "desc": "<ul> <li>Classical instruction from 2003&#8211;2009</li> <li>Jazz instruction beginning in 2012</li> <li>Performed recitals at Senior Living Centers as community service, 2008&#8211;2009</li></ul>"
+        }
+      , "harmo": {
+          "title": "Harmonic Motion"
+        , "date": "2010&#8211;2013"
+        , "subtitle": "Beatboxer and bass singer"
+        , "desc": "&#8220;Brown &#38; RISD's Hottest A Cappella Group.&#8221 Performances on campus throughout the academic year."
+        }
+      , "tkd": {
+          "title": "Brown Tae-Kwon-Do"
+        , "subtitle": "Yellow Belt"
+        }
+      , "frisbee": {
+          "title": "Intramural Ultimate Frisbee"
+        }
+      , "skiing": {
+          "title": "Downhill Skiing"
+        }
       }
     }
   }
