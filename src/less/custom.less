@@ -5,8 +5,8 @@
 
 @displayFont: "Gentium Basic", Georgia, serif;
 @bodyFont   : "Merriweather", Georgia, serif;
-@altFont    : "Gentium Book Basic", Georgia, serif;
 @monoFont   : "Droid Sans Mono", Monaco, monospace;
+@sansFont   : Helvetica, Arial, sans-serif;
 
 @nameKerning: 0.5em;
 
@@ -14,29 +14,36 @@
 @dateRangeStyle : italic;
 @dateRangeWeight: 400;
 
-@sectionHeaderFont  : @altFont;
+@sectionHeaderFont  : @displayFont;
 @sectionHeaderStyle : normal;
 @sectionHeaderWeight: 400;
 
 @itemTitleWeight: 400;
 
 @linkBaseDecoration  : none;
-@linkHoverDecoration : underline;
-@linkActiveDecoration: underline;
-@linkFocusDecoration : underline;
+@linkHoverDecoration : none;
+@linkActiveDecoration: none;
+@linkFocusDecoration : none;
 
 /* Colors */
 
-@linkBaseColor  : #0077ff;
-@linkHoverColor : #0900b5;
-@linkActiveColor: #0cf2f2;
+@linkBaseColor  : #000;
+@linkHoverColor : #999;
+@linkActiveColor: #000;
 @linkFocusColor : @linkActiveColor;
+@linkUnderlineColor: #E0561B;
 
 @labelBackgroundColor: #bbb;
+
+@displayColor: #000;
+
+@codeColor: #333;
 
 /* Spacing */
 
 @itemSpacing: 30px;
+@skillbarSpacing: 25px;
+@skillbarHeight: 22px;
 
 /* Hacky way to prevent navbar from obscuring headers when jumping to # anchor */
 section {
@@ -72,12 +79,13 @@ ul {
 }
 
 a {
+  position: relative;
   color             : @linkBaseColor;
   text-decoration   : @linkBaseDecoration;
-  -webkit-transition: 0.5s ease;
-  -moz-transition   : 0.5s ease;
-  -o-transition     : 0.5s ease;
-  transition        : 0.5s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition   : 0.3s ease;
+  -o-transition     : 0.3s ease;
+  transition        : 0.3s ease;
   &:link {}
   &:visited {}
   &:focus {
@@ -91,10 +99,15 @@ a {
   &:active {
     color             : @linkActiveColor;
     text-decoration   : @linkActiveDecoration;
-    -webkit-transition: 0.1s ease;
-    -moz-transition   : 0.1s ease;
-    -o-transition     : 0.1s ease;
-    transition        : 0.1s ease;
+  }
+  &::after {
+  border-bottom: 1px dotted @linkUnderlineColor;
+  bottom: 1px;
+  content: '';
+  height: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
   }
 }
 
@@ -108,11 +121,16 @@ address {
   text-align: center;
 }
 
+.sans-font {
+  font-family: @sansFont;
+}
+
 .mono-font {
   font-family: @monoFont;
 }
 
 .display-name {
+  color: #000;
   font-family   : @displayFont;
   font-size     : 50px;
   letter-spacing: @nameKerning;
@@ -127,6 +145,15 @@ address {
   margin-bottom: 30px;
   margin-top   : 20px;
   padding-bottom: 5px;
+}
+
+.label {
+  padding: 4px;
+  background: @labelBackgroundColor;
+}
+
+.date.label {
+  padding: 4px 4px 2px 4px;
 }
 
 .resume-item {
@@ -148,9 +175,7 @@ address {
     font-weight: @dateRangeWeight;
   }
   .date.visible-phone.label {
-      background: @labelBackgroundColor;
       margin: 5px 0;
-      padding: 4px 4px 2px 4px;
   }
   .subtitle-row {
     margin-top: 7px;
@@ -169,32 +194,22 @@ address {
   }
 }
 
-/* TODO: finish fancy border hover effects with jQuery
- * a.img {
- *   display              : inline-block
- *   -webkit-box-sizing   : border-box
- *   -moz-box-sizing      : border-box
- *   box-sizing           : border-box
- *   width                : 100px
- *   height               : 100px
- *   -webkit-border-radius: 50px
- *   -moz-border-radius   : 50px
- *   border-radius        : 5px
- *   border-width         : 50px
- *   border-color         : rgba(0,0,0,0)
- *   border-style         : dashed
- *   &:link
- *   &:visited
- *   &:focus
- *     text-decoration: none
- *   &:hover
- *     text-decoration: none
- *     border-width   : 0
- *     border-color   : rgba(0,0,0,0.5)
- *   &:active
- *     color: #0CF2F2
- *     -webkit-transition: 0.1s ease
- *     -moz-transition   : 0.1s ease
- *     -o-transition     : 0.1s ease
- *     transition        : 0.1s ease
- * } */
+.skillbar {
+  .skillbar-title.hidden-phone {
+    text-align: right;
+  }
+  .skillbar-title.visible-phone {
+    text-align: center;
+  }
+  .label {
+    margin-bottom: 10px;
+  }
+  .progress {
+    height: @skillbarHeight;
+    margin-bottom: @skillbarSpacing;
+  }
+}
+
+code {
+  color: @codeColor;
+}

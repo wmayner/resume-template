@@ -20,7 +20,7 @@ body {
 h2 {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family: "Gentium Book Basic", Georgia, serif;
+  font-family: "Gentium Basic", Georgia, serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -32,28 +32,34 @@ ul {
   margin-bottom: 0;
 }
 a {
-  color: #0077ff;
+  position: relative;
+  color: #000000;
   text-decoration: none;
-  -webkit-transition: 0.5s ease;
-  -moz-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 a:focus {
-  color: #0cf2f2;
-  text-decoration: underline;
+  color: #000000;
+  text-decoration: none;
 }
 a:hover {
-  color: #0900b5;
-  text-decoration: underline;
+  color: #999999;
+  text-decoration: none;
 }
 a:active {
-  color: #0cf2f2;
-  text-decoration: underline;
-  -webkit-transition: 0.1s ease;
-  -moz-transition: 0.1s ease;
-  -o-transition: 0.1s ease;
-  transition: 0.1s ease;
+  color: #000000;
+  text-decoration: none;
+}
+a::after {
+  border-bottom: 1px dotted #e0561b;
+  bottom: 1px;
+  content: '';
+  height: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
 }
 address {
   font-size: 18px;
@@ -63,10 +69,14 @@ address {
 .center {
   text-align: center;
 }
+.sans-font {
+  font-family: Helvetica, Arial, sans-serif;
+}
 .mono-font {
   font-family: "Droid Sans Mono", Monaco, monospace;
 }
 .display-name {
+  color: #000;
   font-family: "Gentium Basic", Georgia, serif;
   font-size: 50px;
   letter-spacing: 0.5em;
@@ -80,6 +90,13 @@ address {
   margin-bottom: 30px;
   margin-top: 20px;
   padding-bottom: 5px;
+}
+.label {
+  padding: 4px;
+  background: #bbbbbb;
+}
+.date.label {
+  padding: 4px 4px 2px 4px;
 }
 .resume-item {
   margin-bottom: 30px;
@@ -101,9 +118,7 @@ address {
   font-weight: 400;
 }
 .resume-item .date.visible-phone.label {
-  background: #bbbbbb;
   margin: 5px 0;
-  padding: 4px 4px 2px 4px;
 }
 .resume-item .subtitle-row {
   margin-top: 7px;
@@ -122,32 +137,19 @@ address {
 .resume-item .desc-row .span4 .hidden-phone {
   margin-left: 30px;
 }
-/* TODO: finish fancy border hover effects with jQuery
- * a.img {
- *   display              : inline-block
- *   -webkit-box-sizing   : border-box
- *   -moz-box-sizing      : border-box
- *   box-sizing           : border-box
- *   width                : 100px
- *   height               : 100px
- *   -webkit-border-radius: 50px
- *   -moz-border-radius   : 50px
- *   border-radius        : 5px
- *   border-width         : 50px
- *   border-color         : rgba(0,0,0,0)
- *   border-style         : dashed
- *   &:link
- *   &:visited
- *   &:focus
- *     text-decoration: none
- *   &:hover
- *     text-decoration: none
- *     border-width   : 0
- *     border-color   : rgba(0,0,0,0.5)
- *   &:active
- *     color: #0CF2F2
- *     -webkit-transition: 0.1s ease
- *     -moz-transition   : 0.1s ease
- *     -o-transition     : 0.1s ease
- *     transition        : 0.1s ease
- * } */
+.skillbar .skillbar-title.hidden-phone {
+  text-align: right;
+}
+.skillbar .skillbar-title.visible-phone {
+  text-align: center;
+}
+.skillbar .label {
+  margin-bottom: 10px;
+}
+.skillbar .progress {
+  height: 22px;
+  margin-bottom: 25px;
+}
+code {
+  color: #333333;
+}
