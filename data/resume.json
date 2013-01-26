@@ -59,7 +59,7 @@
       , "resume": {
           "id": "resume"
         , "title": "<a href='https://github.com/wmayner/resume' target='blank'>This Resume</a>"
-        , "desc": "As a way of practicing <code>Node + CoffeeScript + Express + Jade + Less + Bootstrap</code>, I built this resume page as an open-source Node app. The app renders resume content stored in a <span class='mono-font'>JSON</span>. Serious overkill, I know, but hey&#8230; &#8220;learn by doing!&#8221 Check out the <a href='https://github.com/wmayner/resume' target='blank'>repo on github</a>."
+        , "desc": "As a way of getting familiar with the <code>Node</code> + <code>CoffeeScript</code> + <code>Express</code> + <code>Jade</code> + <code>Less</code> + <code>Bootstrap</code> stack, I built this resume page as an open-source Node app. The app renders resume content stored in a <span class='mono-font'>.JSON</span> file. Serious overkill, I know, but hey&#8230; &#8220;learn by doing!&#8221 Check out the <a href='https://github.com/wmayner/resume' target='blank'>repo on github</a>."
         }
       }
     }
