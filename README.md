@@ -13,10 +13,12 @@ Run it
 ```sh
 git clone https://github.com/wmayner/resume.git
 cd ~/resume
-cake dev
+node app.js
 ```
 
 Then point your browser to [http://localhost:3000][2].
+
+Use `cake dev` for development instead of `node app.js`.
 
 Customize it
 ------------
