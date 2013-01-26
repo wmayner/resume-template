@@ -1,9 +1,11 @@
-Resumé
-======
+My Resumé
+=========
 
 Check out the live version [here][1].
 
 Why is this single, static page built as a web app, you ask? I wanted to get a feel for the various technologies involved in the stack, without worrying about the logic and design of a real application. This way, I get a nice, paperless, easily-accessible version of my resumé - and so do you!
+
+I'll be adding a minimal navbar and links to social media, github, etc. as soon as I have some time to get around to it.
 
 Run it
 ------
