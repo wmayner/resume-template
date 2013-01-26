@@ -16,7 +16,7 @@ cd ~/resume
 cake dev
 ```
 
-Then point your browser to [localhost:3000][2].
+Then point your browser to [http://localhost:3000][2].
 
 Customize it
 ------------
@@ -39,5 +39,5 @@ Thanks
 This was inspired by @philipthomas's [cv][3].
 
 [1]: http://www.willmayner.com/
-[2]: localhost:3000
+[2]: http://localhost:3000
 [3]: https://github.com/philipithomas/cv-philipithomas 
