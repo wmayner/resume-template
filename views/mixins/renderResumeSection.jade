@@ -1,5 +1,6 @@
 mixin renderResumeSection(sec)
   include renderResumeItem
+  include renderSkillBar
   section(id=sec.id)
     .row
       .page-header
@@ -7,4 +8,7 @@ mixin renderResumeSection(sec)
     unless typeof sec.items === undefined
       for item in sec.items
         unless typeof item === undefined
-          +renderResumeItem(item)
+          if(sec.id === "skillbars")
+            +renderSkillBar(item)
+          else 
+            +renderResumeItem(item)
