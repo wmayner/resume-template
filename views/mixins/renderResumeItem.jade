@@ -90,3 +90,20 @@ mixin renderResumeItem(item)
           h4.pull-right.hidden-phone.place!= item.place
       .row.desc-row
         div(class=fullSpan)!= item.desc
+    else if (                                      hasDesc)
+      .row.title-row
+        div(class=fullSpan)
+          h4.title!= item.title
+      .row.desc-row
+        div(class=fullSpan)!= item.desc
+    else if (hasSubtitle)
+      .row.title-row
+        div(class=fullSpan)
+          h4.title!= item.title
+      .row.subtitle-row
+        div(class=fullSpan)
+          span.subtitle!= item.subtitle
+    else
+      .row.title-row
+        div(class=fullSpan)
+          h4.title!= item.title
