@@ -48,12 +48,12 @@
     , "items": {
         "splitr": {
           "id": "splitr"
-        , "title": "splitr.co"
+        , "title": "<a href='#' rel='tooltip' title='splitr.co' data-placement='right'>splitr.co</a> <span class='badge badge-info'>Coming soon</span>"
         , "desc": "Beginning development of a web app to divide things fairly among friends"
         }
       , "paper": {
           "id": "paper"
-        , "title": "A 2-Parameter Family of Kernels for Data Interpolation"
+        , "title": "A 2-Parameter Family of Kernels for Data Interpolation <span class='badge badge-info'>Coming soon</span>"
         , "desc": "Coauthoring a paper with my research partner from the REU program at IIT for submission to the Society for Industrial and Applied Mathematics (SIAM) journal"
         }
       , "resume": {
