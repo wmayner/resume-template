@@ -114,13 +114,19 @@ a {
   right: 0;
   }
 }
-a.social-media 
-{
-  &:after {
-    content: none;
-  }
+.social-media {
+  margin-top: @itemSpacing;
   img {
-    margin: 0 10px;
+    margin: 0 5px;
+    opacity: 0.8;
+  }
+  a {
+    &:after {
+      content: none;
+    }
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 
