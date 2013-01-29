@@ -27,8 +27,9 @@ Customize it
 
 Name and contact info are set in `src/app.coffee`. Resume content is rendered from `data/resume.json`.
 
-Each section is a property of of the `sections` object. A section has the mandatory `title` property and optional properties `place`, `date`, `subtitle`, and `desc`.
+Social media icons are generated from the `socialmedia` property of the `resume` object. Properties of `socialmedia` must have an `iconName` property that has the filename of the corresponding icon (these icons should be placed in `public/img`) and a `url` property which points to your profile on the social media site.
 
+Each resume section is a property of of the `sections` object.
 `sections` has a special, optional property called `skillbars`, which is rendered differently than other sections; it must have properties of the form `"a_skill": {"Name of Skill (this will be displayed)": "<integer between 0 and 100>"`.
 
 Also, don't forget to remove my Google Analytics script!
