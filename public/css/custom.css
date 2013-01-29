@@ -95,13 +95,6 @@ address {
   margin-top: 20px;
   padding-bottom: 5px;
 }
-.label {
-  padding: 4px;
-  background: #bbbbbb;
-}
-.date.label {
-  padding: 4px 4px 2px 4px;
-}
 .resume-item {
   margin-bottom: 30px;
 }
@@ -122,6 +115,13 @@ address {
   font-weight: 400;
 }
 .resume-item .label {
+  margin: 0;
+  padding: 4px 4px 2px 4px;
+}
+.resume-item .date.label {
+  margin: 5px 0;
+}
+.resume-item .label.visible-phone {
   margin: 5px 0;
 }
 .resume-item .subtitle-row,

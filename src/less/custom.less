@@ -151,15 +151,6 @@ address {
   padding-bottom: 5px;
 }
 
-.label {
-  padding: 4px;
-  background: @labelBackgroundColor;
-}
-
-.date.label {
-  padding: 4px 4px 2px 4px;
-}
-
 .resume-item {
   margin-bottom: @itemSpacing;
   .title-row {
@@ -179,7 +170,14 @@ address {
     font-weight: @dateRangeWeight;
   }
   .label {
-      margin: 5px 0;
+    margin: 0;
+    padding: 4px 4px 2px 4px;
+  }
+  .date.label {
+    margin: 5px 0;
+  }
+  .label.visible-phone {
+    .date.label
   }
   .subtitle-row, .place-row {
     margin-top: 7px;

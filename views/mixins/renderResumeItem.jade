@@ -7,6 +7,7 @@ mixin renderResumeItem(item)
   rightSpan = "span4"
 
   hasTitle    = item.hasOwnProperty('title')
+  hasLabel    = item.hasOwnProperty('label')
   hasSubtitle = item.hasOwnProperty('subtitle')
   hasDate     = item.hasOwnProperty('date')
   hasPlace    = item.hasOwnProperty('place')
@@ -19,6 +20,8 @@ mixin renderResumeItem(item)
         .row.title-row
           div(class=leftSpan)
             h4.title!= item.title
+              if(hasLabel)
+                span.label.label-info.hidden-phone.pull-right!= item.label
           div(class=rightSpan)
             h4.pull-right.hidden-phone.place!= item.place
           .visible-phone.row.place-row
@@ -27,6 +30,8 @@ mixin renderResumeItem(item)
         .row.title-row
           div(class=leftSpan)
             h4.title!= item.title
+              if(hasLabel)
+                span.label.label-info.hidden-phone.pull-right!= item.label
           div(class=rightSpan)
             span.hidden-phone.pull-right.date!= item.date
             span.visible-phone.label.date!= item.date
@@ -34,6 +39,11 @@ mixin renderResumeItem(item)
         .row.title-row
           div(class=fullSpan)
             h4.title!= item.title
+              if(hasLabel)
+                span.label.label-info.hidden-phone.pull-right!= item.label
+    if (hasLabel)
+      div(class=fullSpan)
+        span.visible-phone.label.label-info!= item.label
     //- subtitle-row
     if (hasSubtitle)
       if (hasPlace && hasDate)
