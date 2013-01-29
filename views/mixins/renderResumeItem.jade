@@ -1,109 +1,68 @@
 //- resume item (i.e. a school, job, etc.)
-//-   takes an object that has a `title` property, and any of these 
-//-   optional properties: place, position, date, description
+//-   takes an object that has any of the optional properties `title`, `place`, `position`, `date`, `desc`
 mixin renderResumeItem(item)
   include linkBadge
   fullSpan  = "span12"
   leftSpan  = "span8"
   rightSpan = "span4"
 
-  hasSubtitle = typeof item.subtitle !== "undefined"
-  hasDate     = typeof item.date     !== "undefined"
-  hasPlace    = typeof item.place    !== "undefined"
-  hasDesc     = typeof item.desc     !== "undefined"
+  hasTitle    = item.hasOwnProperty('title')
+  hasSubtitle = item.hasOwnProperty('subtitle')
+  hasDate     = item.hasOwnProperty('date')
+  hasPlace    = item.hasOwnProperty('place')
+  hasDesc     = item.hasOwnProperty('desc')
 
   .resume-item(id=item.id)
-    if (hasPlace && hasDate && hasSubtitle && hasDesc)
-      .row.title-row
-        div(class=leftSpan)
-          h4.title!= item.title
-        div(class=rightSpan)
-          h4.pull-right.hidden-phone.place!= item.place
-      .row.subtitle-row
-        div(class=leftSpan)
-          span.subtitle!= item.subtitle
-        div(class=rightSpan)
-          span.hidden-phone.pull-right.date!= item.date
+    //- title-row
+    if(hasTitle)
+      if (hasPlace)
+        .row.title-row
+          div(class=leftSpan)
+            h4.title!= item.title
+          div(class=rightSpan)
+            h4.pull-right.hidden-phone.place!= item.place
+          .visible-phone.row.place-row
+            div(class=fullSpan)!= item.place
+      else if (hasDate && !(hasSubtitle))
+        .row.title-row
+          div(class=leftSpan)
+            h4.title!= item.title
+          div(class=rightSpan)
+            span.hidden-phone.pull-right.date!= item.date
+            span.visible-phone.label.date!= item.date
+      else
+        .row.title-row
+          div(class=fullSpan)
+            h4.title!= item.title
+    //- subtitle-row
+    if (hasSubtitle)
+      if (hasPlace && hasDate)
+        .row.subtitle-row
+          div(class=leftSpan)
+            span.subtitle!= item.subtitle
+          div(class=rightSpan)
+            span.hidden-phone.pull-right.date!= item.date
+            span.visible-phone.label.date!= item.date
+      else if (hasDate)
+        .row.subtitle-row
+          div(class=leftSpan)
+            span.subtitle!= item.subtitle
+          div(class=rightSpan)
+            span.hidden-phone.pull-right.date!= item.date
+            span.visible-phone.label.date!= item.date
+      else
+        .row.subtitle-row
+          span.subtitle(class=fullSpan)!= item.subtitle
+    //- desc-row
+    if (hasDesc)
+      if (hasDate && !(hasSubtitle) && !(hasTitle))
+        .row.desc-row.visible-phone
           span.visible-phone.label.date!= item.date
-      .row.desc-row
-        div(class=fullSpan)!= item.desc
-    else if (hasPlace &&            hasSubtitle && hasDesc)
-      .row.title-row
-        div(class=leftSpan)
-          h4.title!= item.title
-        div(class=rightSpan)
-          h4.pull-right.hidden-phone.place!= item.place
-      .row.subtitle-row
-        div(class=fullSpan)
-          span.subtitle!= item.subtitle
-      .row.desc-row
-        div(class=fullSpan)!= item.desc
-    else if (hasPlace && hasDate &&                hasDesc)
-      .row.title-row
-        div(class=leftSpan)
-          h4.title!= item.title
-        div(class=rightSpan)
-          h4.pull-right.hidden-phone.place!= item.place
-      .row.desc-row.hidden-phone
-        div(class=leftSpan)!= item.desc
-        div(class=rightSpan)
-          span.pull-right.date!= item.date
-      .row.desc-row.visible-phone
-        div(class=rightSpan)
-          span.visible-phone.label.date!= item.date
-        div(class=leftSpan)!= item.desc
-    else if (            hasDate && hasSubtitle && hasDesc)
-      .row.title-row
-        div(class=leftSpan)
-          h4.title!= item.title
-        div(class=rightSpan)
-          span.hidden-phone.pull-right.date!= item.date
-      .row.subtitle-row
-        div(class=fullSpan)
-          span.subtitle!= item.subtitle
-        span.visible-phone.label.date!= item.date
-      .row.desc-row
-        div(class=fullSpan)!= item.desc
-    else if (                       hasSubtitle && hasDesc)
-      .row.title-row
-        div(class=fullSpan)
-          h4.title!= item.title
-      .row.subtitle-row
-        div(class=fullSpan)
-          span.subtitle!= item.subtitle
-      .row.desc-row
-        div(class=fullSpan)!= item.desc
-    else if (            hasDate &&                hasDesc)
-      .row.title-row
-        div(class=leftSpan)
-          h4.title!= item.title
-        div(class=rightSpan)
-          span.hidden-phone.pull-right.date!= item.date
-          span.visible-phone.label.date!= item.date
-      .row.desc-row
-        div(class=fullSpan)!= item.desc
-    else if (hasPlace &&                           hasDesc)
-      .row.title-row
-        div(class=leftSpan)
-          h4.title!= item.title
-        div(class=rightSpan)
-          h4.pull-right.hidden-phone.place!= item.place
-      .row.desc-row
-        div(class=fullSpan)!= item.desc
-    else if (                                      hasDesc)
-      .row.title-row
-        div(class=fullSpan)
-          h4.title!= item.title
-      .row.desc-row
-        div(class=fullSpan)!= item.desc
-    else if (hasSubtitle)
-      .row.title-row
-        div(class=fullSpan)
-          h4.title!= item.title
-      .row.subtitle-row
-        div(class=fullSpan)
-          span.subtitle!= item.subtitle
-    else
-      .row.title-row
-        div(class=fullSpan)
-          h4.title!= item.title
+          div(class=fullSpan)!= item.desc
+        .row.desc-row.hidden-phone
+          div(class=leftSpan)!= item.desc
+          div(class=rightSpan)
+            span.hidden-phone.pull-right.date!= item.date
+      else
+        .row.desc-row
+          div(class=fullSpan)!= item.desc

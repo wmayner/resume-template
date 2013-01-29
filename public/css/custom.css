@@ -121,10 +121,11 @@ address {
   font-style: italic;
   font-weight: 400;
 }
-.resume-item .date.visible-phone.label {
+.resume-item .label {
   margin: 5px 0;
 }
-.resume-item .subtitle-row {
+.resume-item .subtitle-row,
+.resume-item .place-row {
   margin-top: 7px;
 }
 .resume-item .subtitle {
