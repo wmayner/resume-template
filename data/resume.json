@@ -1,5 +1,10 @@
 {
-  "sections": {
+  "socialmedia": {
+    "github": {"iconName": "github", "url": "https://github.com/wmayner"}
+  , "twitter": {"iconName": "twitter", "url": "https://twitter.com/wmayner"}
+  , "linkedin": {"iconName": "linkedin", "url": "http://www.linkedin.com/pub/will-mayner/45/357/222/"}
+  }
+, "sections": {
     "education": {
       "id"   : "education"
     , "title": "Education"

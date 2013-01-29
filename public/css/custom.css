@@ -56,7 +56,7 @@ a:active {
   color: #000000;
   text-decoration: none;
 }
-a::after {
+a:after {
   border-bottom: 1px dotted #e0561b;
   bottom: 1px;
   content: '';
@@ -64,6 +64,12 @@ a::after {
   left: 0;
   position: absolute;
   right: 0;
+}
+a.social-media:after {
+  content: none;
+}
+a.social-media img {
+  margin: 0 10px;
 }
 address {
   font-size: 18px;

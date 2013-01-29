@@ -104,7 +104,7 @@ a {
     color             : @linkActiveColor;
     text-decoration   : @linkActiveDecoration;
   }
-  &::after {
+  &:after {
   border-bottom: 1px dotted @linkUnderlineColor;
   bottom: 1px;
   content: '';
@@ -112,6 +112,15 @@ a {
   left: 0;
   position: absolute;
   right: 0;
+  }
+}
+a.social-media 
+{
+  &:after {
+    content: none;
+  }
+  img {
+    margin: 0 10px;
   }
 }
 
