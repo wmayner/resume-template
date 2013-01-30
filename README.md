@@ -43,8 +43,15 @@ Thanks
 
 This was inspired by @philipthomas's [cv][3]. Thanks to @twilson63 for the Cakefile from [express-coffee][4], and to @visionmedia for developing [Express][5].
 
+License
+-------
+
+[MIT License][6]
+
 [1]: http://www.willmayner.com/
 [2]: http://localhost:3000
 [3]: https://github.com/philipithomas/cv-philipithomas 
 [4]: https://github.com/twilson63/express-coffee
 [5]: https://github.com/visionmedia/express
+[6]: http://will.mit-license.org/
+
