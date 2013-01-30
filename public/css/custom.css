@@ -56,14 +56,25 @@ a:active {
   color: #000000;
   text-decoration: none;
 }
-a:after {
-  border-bottom: 1px dotted #e0561b;
-  bottom: 1px;
-  content: '';
-  height: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
+@media (min-width: 481px) {
+  a:after {
+    border-bottom: 1px dotted #19a1e6;
+    bottom: 1px;
+    content: '';
+    height: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+@media (max-width: 480px) {
+  a {
+    text-decoration: underline;
+  }
+  a:hover {
+    color: #999999;
+    text-decoration: underline;
+  }
 }
 .social-media {
   margin-top: 30px;

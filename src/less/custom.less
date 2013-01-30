@@ -20,10 +20,14 @@
 
 @itemTitleWeight: 400;
 
-@linkBaseDecoration  : none;
 @linkHoverDecoration : none;
+@linkHoverDecorationPhone: underline;
+
 @linkActiveDecoration: none;
 @linkFocusDecoration : none;
+
+@linkBaseDecoration     : none;
+@linkBaseDecorationPhone: underline;
 
 /* Colors */
 
@@ -31,7 +35,7 @@
 @linkHoverColor : #999;
 @linkActiveColor: #000;
 @linkFocusColor : @linkActiveColor;
-@linkUnderlineColor: #E0561B;
+@linkUnderlineColor: hsl(200, 80%, 50%);
 
 @labelBackgroundColor: #bbb;
 
@@ -104,14 +108,23 @@ a {
     color             : @linkActiveColor;
     text-decoration   : @linkActiveDecoration;
   }
-  &:after {
-  border-bottom: 1px dotted @linkUnderlineColor;
-  bottom: 1px;
-  content: '';
-  height: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
+  @media (min-width: 481px) {
+    &:after {
+    border-bottom: 1px dotted @linkUnderlineColor;
+    bottom: 1px;
+    content: '';
+    height: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    }
+  }
+  @media (max-width: 480px) {
+    text-decoration   : @linkBaseDecorationPhone;
+    &:hover {
+      color          : @linkHoverColor;
+      text-decoration: @linkHoverDecorationPhone;
+    }
   }
 }
 .social-media {
