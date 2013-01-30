@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Gentium+Basic|Gentium+Book+Basic:400,400italic|Merriweather:400,400italic,700|Droid+Sans+Mono);
 /* Use Google Web Fonts */
-/* Typography */
+/* changeTypography */
 /* Colors */
 /* Spacing */
 /* Hacky way to prevent navbar from obscuring headers when jumping to # anchor */
@@ -80,10 +80,19 @@ a:active {
   margin-top: 30px;
 }
 .social-media img {
-  margin: 0 5px;
   opacity: 0.8;
   width: 64px;
   height: 64px;
+}
+@media (min-width: 481px) {
+  .social-media img {
+    margin: 0 9px;
+  }
+}
+@media (max-width: 480px) {
+  .social-media img {
+    margin: 0 2px;
+  }
 }
 .social-media a:after {
   content: none;
