@@ -71,6 +71,8 @@ a:after {
 .social-media img {
   margin: 0 5px;
   opacity: 0.8;
+  width: 64px;
+  height: 64px;
 }
 .social-media a:after {
   content: none;
