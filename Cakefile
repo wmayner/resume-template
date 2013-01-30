@@ -98,10 +98,11 @@ task 'dev', 'start dev env', ->
     console.log(file)
     ext = path.extname(file).substr(1)
     if ext == 'less'
-      buildLess
+      buildLess()
   )
   # watch_js
-  supervisor = spawn 'node', ['./node_modules/supervisor/lib/cli-wrapper.js','-w','views,data,routes,public', '-e', 'js|jade|json|css', 'app']
-  supervisor.stdout.pipe process.stdout
-  supervisor.stderr.pipe process.stderr
-  log 'Watching js, jade, json, and css files and running app', green
+  cmd = which.sync 'nodemon'
+  nodemon = spawn cmd, ['--ext','".js|.jade|.json|.css|.less"','--delay','1','app.js']
+  nodemon.stdout.pipe process.stdout
+  nodemon.stderr.pipe process.stderr
+  log 'Watching js, jade, json, css, and less files and running app', green

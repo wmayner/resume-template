@@ -18,7 +18,7 @@
     , "mocha": "*"
     , "should": "*"
     , "request": "*"
-    , "supervisor": "*"
+    , "nodemon": "*"
     , "docco": "*"
     , "supertest": "*"
     , "nodewatch": "*"
