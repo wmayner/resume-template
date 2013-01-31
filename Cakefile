@@ -37,6 +37,7 @@ buildCoffee = (callback) ->
   execCoffee ['-c','-b', '-o', 'routes', 'src/routes']
   callback?()
 
+# compile coffee and less
 build = (callback) ->
   buildCoffee -> buildLess -> callback?()
 
@@ -87,22 +88,29 @@ task 'test', 'Run Mocha tests', ->
   build -> test -> log ":)", green
 
 task 'dev', 'start dev env', ->
+  #initial build
   build -> log ":)", green
+
   # watch coffee in src
   execCoffee ['-c','-b', '-w', '-o', '.', 'src/app.coffee'],
     log 'Watching coffee files in src/app', green
   execCoffee ['-c', '-b', '-w', '-o', 'routes', 'src/routes'],
     log 'Watching coffee files in src/routes', green
-  # watch less in src/less
+
+  # autocompile less
   watch.add("./src/less", true).onChange((file,prev,curr,action) ->
-    console.log(file)
-    ext = path.extname(file).substr(1)
-    if ext == 'less'
-      buildLess()
+    log 'compiling '+file.split(path.dirname(file)+"/")[1], green
+    buildLess()
   )
-  # watch_js
-  cmd = which.sync 'nodemon'
-  nodemon = spawn cmd, ['--ext','".js|.jade|.json|.css|.less"','--delay','1','app.js']
-  nodemon.stdout.pipe process.stdout
-  nodemon.stderr.pipe process.stderr
-  log 'Watching js, jade, json, css, and less files and running app', green
+
+  # auto restart node with nodemon
+  supervisor = spawn 'node', [
+    './node_modules/supervisor/lib/cli-wrapper.js'
+    ,'-w'
+    ,'views,routes,data'
+    ,'-e'
+    ,'js|jade|json|css|less'
+    ,'app'
+  ]
+  supervisor.stdout.pipe process.stdout
+  supervisor.stderr.pipe process.stderr
