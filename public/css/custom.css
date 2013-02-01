@@ -113,6 +113,7 @@ address {
   font-family: "Droid Sans Mono", Monaco, monospace;
 }
 .display-name {
+  text-transform: uppercase;
   color: #000;
   font-family: "Gentium Basic", Georgia, serif;
   font-size: 50px;

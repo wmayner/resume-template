@@ -9,7 +9,6 @@ app = express()
 app.configure () ->
   # Personal info
   app.set "name"       , "Will Mayner"
-  app.set "displayName", "WILL MAYNER"
   app.set "homepage"   , "www.willmayner.com"
   app.set "email"      , "wmayner@gmail.com"
   app.set "phone"      , "+1.646.824.9455"
