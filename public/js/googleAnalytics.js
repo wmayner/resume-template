@@ -1,5 +1,6 @@
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-35736272-1']);
+_gaq.push(['_setAccount', 'UA-35736272-3']);
+_gaq.push(['_setDomainName', 'willmayner.com']);
 _gaq.push(['_trackPageview']);
 
 (function() {
