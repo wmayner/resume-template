@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Gentium+Basic|Gentium+Book+Basic:400,400italic|Merriweather:400,400italic,700|Droid+Sans+Mono);
+@import url('http://fonts.googleapis.com/css?family=Gentium+Basic|Merriweather:400,400italic,700');
 /* Use Google Web Fonts */
 /* Typography */
 /* Colors */
@@ -9,7 +9,7 @@ section {
   margin-top: -40px;
 }
 body {
-  font-family: 'Merriweather', 'Georgia', serif;
+  font-family: 'Merriweather', Georgia, serif;
   -webkit-transition: 0.1s ease;
   -moz-transition: 0.1s ease;
   -o-transition: 0.1s ease;
@@ -18,7 +18,7 @@ body {
 h2 {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family: "Gentium Basic", Georgia, serif;
+  font-family: 'Gentium Basic', Georgia, serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -107,15 +107,15 @@ address {
   text-align: center;
 }
 .sans-font {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Armata', Helvetica, Arial, sans-serif;
 }
 .mono-font {
-  font-family: "Droid Sans Mono", Monaco, monospace;
+  font-family: 'Monaco', monospace;
 }
 .display-name {
   text-transform: uppercase;
   color: #000;
-  font-family: "Gentium Basic", Georgia, serif;
+  font-family: 'Gentium Basic', Georgia, serif;
   font-size: 50px;
   letter-spacing: 0.5em;
   padding: 10px 0px;
@@ -144,7 +144,7 @@ address {
   margin: 0;
 }
 .resume-item .date {
-  font-family: "Merriweather", Georgia, serif;
+  font-family: 'Merriweather', Georgia, serif;
   font-style: italic;
   font-weight: 400;
 }

@@ -1,12 +1,12 @@
 /* Use Google Web Fonts */
-@import url(http://fonts.googleapis.com/css?family=Gentium+Basic|Gentium+Book+Basic:400,400italic|Merriweather:400,400italic,700|Droid+Sans+Mono);
+@import url('http://fonts.googleapis.com/css?family=Gentium+Basic|Merriweather:400,400italic,700');
 
 /* Typography */
 
-@displayFont: "Gentium Basic", Georgia, serif;
-@bodyFont   : "Merriweather", Georgia, serif;
-@monoFont   : "Droid Sans Mono", Monaco, monospace;
-@sansFont   : Helvetica, Arial, sans-serif;
+@displayFont: 'Gentium Basic', Georgia, serif;
+@bodyFont   : 'Merriweather', Georgia, serif;
+@monoFont   : 'Monaco', monospace;
+@sansFont   : 'Armata', Helvetica, Arial, sans-serif;
 
 @nameKerning: 0.5em;
 
@@ -55,7 +55,7 @@ section {
   margin-top : -40px;
 }
 body {
-  font-family: 'Merriweather', 'Georgia', serif;
+  font-family: @bodyFont;
   -webkit-transition: 0.1s ease;
   -moz-transition   : 0.1s ease;
   -o-transition     : 0.1s ease;
