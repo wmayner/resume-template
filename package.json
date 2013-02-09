@@ -21,7 +21,7 @@
     , "supervisor": "*"
     , "docco": "*"
     , "supertest": "*"
-    , "nodewatch": "*"
+    , "watchr": "*"
     , "path": "*"
   }
   , "engines": {

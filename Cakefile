@@ -2,8 +2,12 @@ fs            = require 'fs'
 {print}       = require 'util'
 which         = require 'which'
 {spawn, exec} = require 'child_process'
-watch         = require 'nodewatch'
+watchr        = require 'watchr'
 path          = require 'path'
+
+###########
+# Helpers #
+##############################################################
 
 # ANSI Terminal Colors
 bold  = '\x1B[0;1m'
@@ -18,28 +22,34 @@ startCmd = pkg.scripts.start
 log = (message, color, explanation) ->
   console.log color + message + reset + ' ' + (explanation or '')
 
-execCoffee = (options, callback) ->
-  cmd = which.sync 'coffee'
-  coffee = spawn cmd, options
-  coffee.stdout.pipe process.stdout
-  coffee.stderr.pipe process.stderr
-  coffee.on 'exit', (status) -> callback?() if status is 0
+execute = (cmd, options, callback) ->
+  command = spawn cmd, options
+  command.stdout.pipe process.stdout
+  command.stderr.pipe process.stderr
+  command.on 'exit', (status) -> callback?() if status is 0
+
+prefixer = (inputFiles, outputFile, callback) ->
+  exec 'cssprefixer '+inputFiles+' > '+outputFile+' --minify', (err, stdout, stderr) ->
+    log 'prefixed '+inputFiles+' to '+outputFile, green 
+    callback?()
+
+####################
+# Project-specific #
+##############################################################
 
 buildLess = (callback) ->
-  exec 'lessc src/less/custom.less public/css/custom.css', (err, stdout, stderr) ->
-    err && throw err
+  execute 'node_modules/less/bin/lessc',
+    ['src/less/custom.less', 'public/css/custom.css'],
     log 'less compiled!', green
-    callback?()
+  callback?()
 
 # Compiles app.coffee and src directory to the app directory
 buildCoffee = (callback) ->
-  execCoffee ['-c','-b', '-o', '.', 'src/app.coffee']
-  execCoffee ['-c','-b', '-o', 'routes', 'src/routes']
+  execute 'node_modules/coffee-script/bin/coffee', ['-c','-b', '-o', '.', 'src/app.coffee'],
+    log 'compiled app.coffee', green
+  execute 'node_modules/coffee-script/bin/coffee', ['-c','-b', '-o', 'routes', 'src/routes'],
+    log 'compiled routes', green
   callback?()
-
-# compile coffee and less
-build = (callback) ->
-  buildCoffee -> buildLess -> callback?()
 
 # mocha test
 test = (callback) ->
@@ -53,38 +63,44 @@ test = (callback) ->
     './app'
   ]
   try
-    cmd = which.sync 'mocha' 
-    spec = spawn cmd, options
-    spec.stdout.pipe process.stdout 
-    spec.stderr.pipe process.stderr
-    spec.on 'exit', (status) -> callback?() if status is 0
+    execute 'node_modules/mocha/bin/mocha', options, callback?()
   catch err
     log err.message, red
     log 'Mocha is not installed - try npm install mocha -g', red
 
+# generate coffee docs
 docco = (target) ->
   fs.readdir target, (err, contents) ->
     files = ("#{target}/#{file}" for file in contents when /\.coffee$/.test file)
     try
-      cmd = which.sync 'docco'
-      docco = spawn cmd, files
-      docco.stdout.pipe process.stdout
-      docco.stderr.pipe process.stderr
-      docco.on 'exit', (status) -> callback?() if status is 0
+      execute 'node_modules/docco/bin/docco', files, callback?()
     catch err
       log err.message, red
       log 'Docco is not installed - try npm install docco -g', red
 
-task 'docs', 'Generate annotated source code with Docco', ->
-  docco "src"
+# prefix custom.css
+prefixCSS = (callback) ->
+  prefixer 'src/css/custom.css', 'public/css/custom.css', callback
+  prefixer 'src/css/print.css', 'public/css/print.css', callback
 
-task 'build', ->
+# build the whole project
+build = (callback) ->
+  buildCoffee -> prefixCSS -> callback?()
+
+#########
+# Tasks #
+##############################################################
+
+task 'build', 'compile, minify, and prefix everything', ->
   build -> log ":)", green
 
-task 'spec', 'Run Mocha tests', ->
-  build -> test -> log ":)", green
+task 'prefixcss', 'add cross-browser compatibility to css', ->
+  prefixCSS -> log "prefixed CSS!", green
 
-task 'test', 'Run Mocha tests', ->
+task 'docs', 'generate annotated source code with Docco', ->
+  docco "src"
+
+task 'spec', 'run mocha tests', ->
   build -> test -> log ":)", green
 
 task 'dev', 'start dev env', ->
@@ -92,24 +108,38 @@ task 'dev', 'start dev env', ->
   build -> log ":)", green
 
   # watch coffee in src
-  execCoffee ['-c','-b', '-w', '-o', '.', 'src/app.coffee'],
+  execute 'node_modules/coffee-script/bin/coffee',
+    ['-c','-b', '-w', '-o', '.', 'src/app.coffee'],
     log 'Watching coffee files in src/app', green
-  execCoffee ['-c', '-b', '-w', '-o', 'routes', 'src/routes'],
+  execute 'node_modules/coffee-script/bin/coffee',
+    ['-c', '-b', '-w', '-o', 'routes', 'src/routes'],
     log 'Watching coffee files in src/routes', green
 
-  # autocompile less
-  watch.add("./src/less", true).onChange((file,prev,curr,action) ->
-    log 'compiling '+file.split(path.dirname(file)+"/")[1], green
-    buildLess()
-  )
+  # prefix css
+  watchr.watch {
+    path: 'src/css/'
+  , listeners: {
+    , log: (logLevel) ->
+        console.log 'watchr log:', arguments
+    , error: (err) ->
+        log 'prefixer:', err, green
+    , watching: (err, watcherInstance, isWatching) ->
+        if (err)
+          log "Failed to watch #{watcherInstance.path} with error", err, green 
+        else
+          log 'Watching CSS in '+watcherInstance.path, green
+    , change: (changeType, filePath, fileCurrentStat, filePreviousStat) ->
+        prefixer filePath, 'public/css/'+path.basename(filePath)
+    }
+  }
 
-  # auto restart node with nodemon
+  # auto restart node with supervisor
   supervisor = spawn 'node', [
     './node_modules/supervisor/lib/cli-wrapper.js'
     ,'-w'
     ,'views,routes,data'
     ,'-e'
-    ,'js|jade|json|css|less'
+    ,'js|jade|json|css'
     ,'app'
   ]
   supervisor.stdout.pipe process.stdout

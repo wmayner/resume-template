@@ -1,7 +1,5 @@
-/* Use Google Web Fonts */
+// Use Google Web Fonts
 @import url('http://fonts.googleapis.com/css?family=Gentium+Basic|Merriweather:400,400italic,700');
-
-/* Typography */
 
 @displayFont: 'Gentium Basic', Georgia, serif;
 @bodyFont   : 'Merriweather', Georgia, serif;
@@ -29,7 +27,7 @@
 @linkBaseDecoration     : none;
 @linkBaseDecorationPhone: underline;
 
-/* Colors */
+// Colors
 
 @linkBaseColor  : #000;
 @linkHoverColor : #999;
@@ -43,13 +41,13 @@
 
 @codeColor: #333;
 
-/* Spacing */
+// Spacing
 
 @itemSpacing: 30px;
 @skillbarSpacing: 25px;
 @skillbarHeight: 22px;
 
-/* Hacky way to prevent navbar from obscuring headers when jumping to # anchor */
+// Hacky way to prevent navbar from obscuring headers when jumping to # anchor
 section {
   padding-top: 40px;
   margin-top : -40px;
@@ -87,8 +85,6 @@ a {
   -moz-transition   : 0.3s ease;
   -o-transition     : 0.3s ease;
   transition        : 0.3s ease;
-  &:link {}
-  &:visited {}
   &:focus {
     color          : @linkFocusColor;
     text-decoration: @linkFocusDecoration;
@@ -135,7 +131,7 @@ a {
   }
   a {
     &:after {
-      content: none;
+      display: none!important;
     }
     &:hover {
       opacity: 0.5;
@@ -186,7 +182,8 @@ address {
   .place {
     margin: 0;
   }
-  .date /* when viewport is large, italicize date ranges and use different font */ {
+  // when viewport is large, italicize date ranges and use different font
+  .date {
     font-family: @dateRangeFont;
     font-style : @dateRangeStyle;
     font-weight: @dateRangeWeight;
@@ -231,6 +228,9 @@ address {
     height: @skillbarHeight;
     margin-bottom: @skillbarSpacing;
   }
+}
+@media screen {
+  #skillbars-print { display: none }
 }
 code {
   color: @codeColor;

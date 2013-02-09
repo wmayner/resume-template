@@ -1,0 +1,194 @@
+@import url('http://fonts.googleapis.com/css?family=Gentium+Basic|Merriweather:400,400italic,700');
+section {
+  padding-top: 40px;
+  margin-top: -40px;
+}
+body {
+  font-family: 'Merriweather', Georgia, serif;
+  -webkit-transition: 0.1s ease;
+  -moz-transition: 0.1s ease;
+  -o-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'Gentium Basic', Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+h4 {
+  margin: 0;
+  font-weight: 400;
+}
+h4 .badge {
+  margin-left: 10px;
+  padding: 5px 9px 3px 9px;
+}
+ul {
+  margin-bottom: 0;
+}
+a {
+  position: relative;
+  color: #000000;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+a:focus {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  color: #999999;
+  text-decoration: none;
+}
+a:active {
+  color: #000000;
+  text-decoration: none;
+}
+@media (min-width: 481px) {
+  a:after {
+    border-bottom: 1px dotted #19a1e6;
+    bottom: 1px;
+    content: '';
+    height: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+@media (max-width: 480px) {
+  a {
+    text-decoration: underline;
+  }
+  a:hover {
+    color: #999999;
+    text-decoration: underline;
+  }
+}
+.social-media {
+  margin-top: 30px;
+}
+.social-media img {
+  opacity: 0.8;
+  width: 64px;
+  height: 64px;
+}
+@media (min-width: 481px) {
+  .social-media img {
+    margin: 0 9px;
+  }
+}
+@media (max-width: 480px) {
+  .social-media img {
+    margin: 0 2px;
+  }
+}
+.social-media a:after {
+  display: none!important;
+}
+.social-media a:hover {
+  opacity: 0.5;
+}
+address {
+  font-size: 18px;
+  line-height: 1.5em;
+  margin-bottom: 2em;
+}
+.center {
+  text-align: center;
+}
+.sans-font {
+  font-family: 'Armata', Helvetica, Arial, sans-serif;
+}
+.mono-font {
+  font-family: 'Monaco', monospace;
+}
+.display-name {
+  text-transform: uppercase;
+  color: #000;
+  font-family: 'Gentium Basic', Georgia, serif;
+  font-size: 50px;
+  letter-spacing: 0.5em;
+  padding: 10px 0px;
+  margin-right: -0.5em;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  line-height: 1.2em;
+}
+.page-header {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  padding-bottom: 5px;
+}
+.resume-item {
+  margin-bottom: 30px;
+}
+.resume-item .title-row {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 400;
+}
+.resume-item .title {
+  font-weight: 400;
+}
+.resume-item .place {
+  margin: 0;
+}
+.resume-item .date {
+  font-family: 'Merriweather', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+.resume-item .label {
+  margin: 0;
+  padding: 4px 4px 2px 4px;
+}
+.resume-item .date.label {
+  margin: 5px 0;
+}
+.resume-item .label.visible-phone {
+  margin: 5px 0;
+}
+.resume-item .subtitle-row,
+.resume-item .place-row {
+  margin-top: 7px;
+}
+.resume-item .subtitle {
+  font-style: italic;
+}
+.resume-item .desc-row .span12,
+.resume-item .desc-row .span8,
+.resume-item .desc-row .span4 {
+  margin-right: 0;
+  margin-top: 7px;
+}
+.resume-item .desc-row .span12 .hidden-phone,
+.resume-item .desc-row .span8 .hidden-phone,
+.resume-item .desc-row .span4 .hidden-phone {
+  margin-left: 30px;
+}
+.skillbar .skillbar-title.hidden-phone {
+  text-align: right;
+}
+.skillbar .skillbar-title.visible-phone {
+  text-align: center;
+}
+.skillbar .label {
+  margin-bottom: 10px;
+}
+.skillbar .progress {
+  height: 22px;
+  margin-bottom: 25px;
+}
+@media screen {
+  #skillbars-print {
+    display: none;
+  }
+}
+code {
+  color: #333333;
+}

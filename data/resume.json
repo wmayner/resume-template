@@ -51,7 +51,8 @@
       }
     }
   , "projects": {
-      "title": "Projects"
+      "id": "projects"
+    , "title": "Projects"
     , "items": {
         "splitr": {
           "id": "splitr"
@@ -96,8 +97,18 @@
       , "windows": {"title": "Windows", "level": "80"}
       }
     }
+  , "skillbars-print": {
+      "id": "skillbars-print"
+    , "title": "Technical Skills"
+    , "items": {
+        "skills": {
+          "desc": "<code>CoffeeScript</code>, <code>Node</code>, <code>Express</code>, <code>git</code>, <code>SASS</code>, <code>HTML</code>, <code>Jade</code>, <code>Bootstrap</code>, <code>Vim</code>, <code>Java</code>, <code>Scheme</code>, <code>Unix</code>, <code>hg</code>, <code>Matlab</code>, <code>Mathematica</code>, <code>LaTeX</code>, <code>Maple</code>, <code>Windows</code>"
+        }
+      }
+    }
   , "leadership": {
-      "title": "Leadership Experience"
+      "id": "leadership"
+    , "title": "Leadership Experience"
     , "items": {
         "goclub": {
           "id": "goclub"
