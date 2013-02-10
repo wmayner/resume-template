@@ -7,7 +7,7 @@ path          = require 'path'
 
 ###########
 # Helpers #
-##############################################################
+########################################
 
 # ANSI Terminal Colors
 bold  = '\x1B[0;1m'
@@ -33,15 +33,14 @@ prefixer = (inputFiles, outputFile, callback) ->
     log 'prefixed '+inputFiles+' to '+outputFile, green 
     callback?()
 
+lessc = (inputFiles, outputFile, callback) ->
+  exec "node_modules/less/bin/lessc #{inputFiles} #{outputFile}", (err, stdout, stderr) ->
+    log 'compiled '+inputFiles+' to '+outputFile, green 
+    callback?()
+
 ####################
 # Project-specific #
-##############################################################
-
-buildLess = (callback) ->
-  execute 'node_modules/less/bin/lessc',
-    ['src/less/custom.less', 'public/css/custom.css'],
-    log 'less compiled!', green
-  callback?()
+########################################
 
 # Compiles app.coffee and src directory to the app directory
 buildCoffee = (callback) ->
@@ -78,6 +77,10 @@ docco = (target) ->
       log err.message, red
       log 'Docco is not installed - try npm install docco -g', red
 
+# compile custom.less
+buildLess = (callback) ->
+  lessc 'src/less/custom.less', 'src/css/custom.css', callback?()
+
 # prefix custom.css
 prefixCSS = (callback) ->
   prefixer 'src/css/custom.css', 'public/css/custom.css', callback
@@ -85,11 +88,11 @@ prefixCSS = (callback) ->
 
 # build the whole project
 build = (callback) ->
-  buildCoffee -> prefixCSS -> callback?()
+  buildCoffee -> buildLess -> prefixCSS -> callback?()
 
 #########
 # Tasks #
-##############################################################
+########################################
 
 task 'build', 'compile, minify, and prefix everything', ->
   build -> log ":)", green
@@ -130,6 +133,22 @@ task 'dev', 'start dev env', ->
           log 'Watching CSS in '+watcherInstance.path, green
     , change: (changeType, filePath, fileCurrentStat, filePreviousStat) ->
         prefixer filePath, 'public/css/'+path.basename(filePath)
+    }
+  }
+  watchr.watch {
+    path: 'src/less/'
+  , listeners: {
+    , log: (logLevel) ->
+        console.log 'watchr log:', arguments
+    , error: (err) ->
+        log 'lessc:', err, green
+    , watching: (err, watcherInstance, isWatching) ->
+        if (err)
+          log "Failed to watch #{watcherInstance.path} with error", err, green 
+        else
+          log 'Watching Less in '+watcherInstance.path, green
+    , change: (changeType, filePath, fileCurrentStat, filePreviousStat) ->
+        lessc filePath, 'src/css/'+path.basename(filePath).split(path.extname(filePath))[0]+'.css'
     }
   }
 
