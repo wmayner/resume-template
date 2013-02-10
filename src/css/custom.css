@@ -186,3 +186,35 @@ address {
 code {
   color: #333333;
 }
+@media print {
+  li {
+    margin-left: 20px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  body {
+    font-size: 12px;
+  }
+  .display-name {
+    margin: 25px 0!important;
+    font-size: 40px;
+  }
+  .social-media {
+    display: none !important;
+  }
+  #skillbars {
+    display: none !important;
+  }
+  #skillbars-print {
+    display: block!important;
+    line-height: 2;
+  }
+  a:link:after,
+  a:visited:after {
+    display: none !important;
+  }
+}
