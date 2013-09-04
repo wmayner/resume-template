@@ -7,46 +7,59 @@
   , "linkedin": {"iconName": "linkedin", "url": "http://www.linkedin.com/pub/will-mayner/45/357/222/"}
   }
 , "sections": {
-    "education": {
+    "experience": {
+      "id": "experience"
+    , "title": "Professional Experience"
+    , "items": {
+        "crowsdurf.io": {
+          "id": "crowdsurf.io"
+        , "title": "crowdsurf.io "
+        , "label": "Current position"
+        , "place": "Providence, RI"
+        , "subtitle": "Co-founder and CTO"
+        , "date": "Spring 2013–Present"
+        , "desc": "<ul><li>Event analytics startup founded with Alex Oberg and Evan Altman in my last semester at Brown</li><li>Back-end development, software architecture, proprietary algorithm design</li><li>Crowdsurf.io is a member of <a href='http://www.betaspring.com/about'>Betaspring’s Fall 2013 session</a>. The program provides seed funding and mentorship for early-stage startups.</li></ul>"
+        }
+      , "reu": {
+          "id": "reu"
+        , "title": "<a href='http://math.iit.edu/~openscholar/meshfree/event/reu-iit' target='_blank'>Research Experience for Undergraduates in Computational Mathematics</a>"
+        , "website": "http://math.iit.edu/~openscholar/meshfree/event/reu-iit"
+        , "place": "Chicago, IL"
+        , "subtitle": "Researcher"
+        , "date": "Summer 2012"
+        , "desc": "<ul><li>Studied a novel 2-parameter family of kernel functions for data interpolation, under the direction of Greg Fasshauer, Ph.D, Professor of Applied Mathematics at the <a href='http://www.iit.edu/' target='_blank'>Illinois Institute of Technology</a></li><li>Contributed to a code repository of numerical experiments in Matlab</li><li>Conducted theoretical investigations of closed forms for Green&#8217s functions associated with the 2-parameter family</li><li>Presented results at the <a href='http://www.ymc.osu.edu/' target='_blank'>Young Mathematicians Conference</a> at Ohio State University; our abstract was one of 55 accepted out of 110 submitted</li><li>Presented results at the <a href='http://jointmathematicsmeetings.org/' target='_blank'>Joint Mathematics Meetings</a> in San Diego, CA </li><li>Research funded by NSF grant DMS-1115392</li></ul>"
+        }
+      , "penobscot": {
+          "id": "penobscot"
+        , "title": "<a href='http://www.linkedin.com/company/penobscot-management-llc.' target='_blank'>Penobscot Management, LLC</a>"
+        , "website": "http://www.linkedin.com/company/penobscot-management-llc."
+        , "place": "Schaumburg, IL"
+        , "subtitle": "Real Estate Management Intern"
+        , "date": "June 2011"
+        , "desc": "<ul> <li>Leased apartments and participated in management meetings in the Sales and Management office of a 6-building midrise property</li> <li>Proposed an alteration to one of the buildings on the property that resulted in a $70,000 investment by the owner, with an additional $140,000 allocated for two additional buildings</li> </ul>"
+        }
+      }
+    }
+  , "education": {
       "id"   : "education"
     , "title": "Education"
     , "items": {
         "brown": {
           "id": "brown"
         , "title": "<a href='http://brown.edu' target='_blank'>Brown University</a>"
+        , "website": "http://brown.edu"
         , "place": "Providence, RI"
         , "subtitle": "Sc.B. in Mathematics&#8212;Computer Science"
-        , "date": "May, 2013 (expected)"
-        , "desc": "<span><strong>Relevant Coursework: </strong></span> Design and Analysis of Algorithms; Multiprocessor Synchronization; Cryptography; Cybersecurity and International Relations; Programming with Data Structures and Algorithms; Models of Computation; Fundamental Problems of Geometry; Combinatorial Topology; Abstract Algebra; and Linear Algebra"
+        , "date": "May, 2013"
+        , "desc": "<span><strong>Relevant Coursework: </strong></span> Modern Web Applications; Artificial Intelligence; Design and Analysis of Algorithms; Multiprocessor Synchronization; Cryptography; Cybersecurity and International Relations; Programming with Data Structures and Algorithms; Models of Computation; Fundamental Problems of Geometry; Combinatorial Topology; Abstract Algebra; and Linear Algebra"
         }
       , "dalton": {
           "id": "dalton"
         , "title": "<a href='http://www.dalton.org/' target='_blank'>The Dalton School</a>"
+        , "website": "http://www.dalton.org/"
         , "place": "New York, NY"
         , "date": "2001&#8211;2009"
         , "desc": "<ul><li>Member of ACSL Computer Science Team</li><li>National Merit semifinalist</li>"
-        }
-      }
-    }
-  , "experience": {
-      "id": "experience"
-    , "title": "Professional Experience"
-    , "items": {
-        "reu": {
-          "id": "reu"
-        , "title": "<a href='http://math.iit.edu/~openscholar/meshfree/event/reu-iit' target='_blank'>Research Experience for Undergraduates in Computational Mathematics</a>"
-        , "place": "Chicago, IL"
-        , "subtitle": "Researcher"
-        , "date": "Summer 2012"
-        , "desc": "<ul> <li>Studied a novel 2-parameter family of kernel functions for data interpolation, under the direction of Greg Fasshauer, Ph.D, Professor of Applied Mathematics at the <a href='http://www.iit.edu/' target='_blank'>Illinois Institute of Technology</a></li> <li>Contributed to a code repository of numerical experiments in Matlab</li> <li>Conducted theoretical investigations of closed forms for Green&#8217s functions associated with the 2-parameter family</li> <li>Presented results at the <a href='http://www.ymc.osu.edu/' target='_blank'>Young Mathematicians Conference</a> at Ohio State University; our abstract was one of 55 accepted out of 110 submitted</li> <li>Presented results at the <a href='http://jointmathematicsmeetings.org/' target='_blank'>Joint Mathematics Meetings</a> in San Diego, CA <li>Research funded by NSF grant DMS-1115392</li> </ul>"
-        }
-      , "penobscot": {
-          "id": "penobscot"
-        , "title": "<a href='http://www.linkedin.com/company/penobscot-management-llc.' target='_blank'>Penobscot Management, LLC</a>"
-        , "place": "Schaumburg, IL"
-        , "subtitle": "Real Estate Management Intern"
-        , "date": "June 2011"
-        , "desc": "<ul> <li>Leased apartments and participated in management meetings in the Sales and Management office of a 6-building midrise property</li> <li>Proposed an alteration to one of the buildings on the property that resulted in a $70,000 investment by the owner, with an additional $140,000 allocated for two additional buildings</li> </ul>"
         }
       }
     }
@@ -58,7 +71,7 @@
           "id": "splitr"
         , "label": "Coming soon"
         , "title": "splitr.co"
-        , "desc": "Beginning development of a web app to divide things fairly among friends"
+        , "desc": "A web app to divide things fairly among friends"
         }
       , "paper": {
           "id": "paper"
@@ -69,6 +82,7 @@
       , "resume": {
           "id": "resume"
         , "title": "<a href='https://github.com/wmayner/resume' target='_blank'>This Resume</a>"
+        , "website": "https://github.com/wmayner/resume"
         , "desc": "As a way of getting familiar with the <code>Node</code> + <code>CoffeeScript</code> + <code>Express</code> + <code>Jade</code> + <code>Less</code> + <code>Bootstrap</code> stack, I built this resume page as an open-source Node app. The app renders resume content stored in a <span class='mono-font'>.JSON</span> file. Check out the <a href='https://github.com/wmayner/resume' target='_blank'>repo on github</a>."
         }
       }
@@ -77,22 +91,23 @@
       "id": "skillbars"
     , "title": "Technical Skills"
     , "items": {
-        "coffeescript": {"title": "CoffeeScript", "level": "80"}
-      , "node": {"title": "Node.js", "level": "70"}
-      , "express": {"title": "Express", "level": "80"}
-      , "git": {"title": "git", "level": "70"}
+        "matlab": {"title": "Matlab", "level": "90"}
+      , "latex": {"title": "LaTeX", "level": "95"}
+      , "coffeescript": {"title": "CoffeeScript", "level": "85"}
+      , "git": {"title": "git", "level": "90"}
+      , "vim": {"title": "Vim", "level": "95"}
+      , "node": {"title": "Node.js", "level": "80"}
+      , "express": {"title": "Express", "level": "85"}
+      , "angular": {"title": "Angular.js", "level": "50"}
       , "css": {"title": "SASS/LESS/CSS", "level": "70"}
       , "html": {"title": "HTML", "level": "80"}
       , "jade": {"title": "Jade", "level": "60"}
       , "bootstrap": {"title": "Bootstrap", "level": "80"}
-      , "vim": {"title": "Vim", "level": "85"}
-      , "java": {"title": "Java", "level": "75"}
+      , "java": {"title": "Java", "level": "65"}
       , "scheme": {"title": "Scheme", "level": "50"}
-      , "unix": {"title": "Unix", "level": "60"}
-      , "hg": {"title": "hg", "level": "70"}
-      , "matlab": {"title": "Matlab", "level": "85"}
+      , "unix": {"title": "Unix", "level": "80"}
+      , "hg": {"title": "hg", "level": "65"}
       , "mathematica": {"title": "Mathematica", "level": "40"}
-      , "latex": {"title": "LaTeX", "level": "95"}
       , "maple": {"title": "Maple", "level": "60"}
       , "windows": {"title": "Windows", "level": "80"}
       }
@@ -113,6 +128,7 @@
         "goclub": {
           "id": "goclub"
         , "title": "<a href='http://www.college-go.org/' target='_blank'>Brown University Go Club</a>"
+        , "website": "http://www.college-go.org/"
         , "place": "Providence, RI"
         , "subtitle": "Founding Member"
         , "date": "2010&#8211;present"
@@ -121,6 +137,7 @@
       , "winona": {
           "id": "winona"
         , "title": "<a href='http://www.winonacamps.com/' target='_blank'>Winona Camps</a>"
+        , "website": "http://www.winonacamps.com/"
         , "place": "Bridgton, ME"
         , "subtitle": "Woodworking and Riflery Counselor"
         , "date": "Summers of 2007&#8211;2011"

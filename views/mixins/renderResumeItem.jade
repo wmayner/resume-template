@@ -19,8 +19,6 @@ mixin renderResumeItem(item)
         .row.title-row
           div(class=leftSpan)
             h4.title!= item.title
-              if(hasLabel)
-                span.label.label-info.hidden-phone.pull-right!= item.label
           div(class=rightSpan)
             h4.pull-right.hidden-phone.place!= item.place
           .visible-phone.row.place-row
@@ -30,7 +28,7 @@ mixin renderResumeItem(item)
           div(class=leftSpan)
             h4.title!= item.title
               if(hasLabel)
-                span.label.label-info.hidden-phone.pull-right!= item.label
+                span.label.label-info.hidden-phone!= item.label
           div(class=rightSpan)
             span.hidden-phone.pull-right.date!= item.date
             span.visible-phone.label.date!= item.date
@@ -39,16 +37,16 @@ mixin renderResumeItem(item)
           div(class=fullSpan)
             h4.title!= item.title
               if(hasLabel)
-                span.label.label-info.hidden-phone.pull-right!= item.label
-    if (hasLabel)
-      div(class=fullSpan)
-        span.visible-phone.label.label-info!= item.label
+                span.label.label-info.hidden-phone!= item.label
     //- subtitle-row
     if (hasSubtitle)
       if (hasPlace && hasDate)
         .row.subtitle-row
           div(class=leftSpan)
             span.subtitle!= item.subtitle
+            if(hasLabel)
+              span.visible-phone.label.label-info!= item.label
+              span.label.label-info.hidden-phone!= item.label
           div(class=rightSpan)
             span.hidden-phone.pull-right.date!= item.date
             span.visible-phone.label.date!= item.date
@@ -56,12 +54,18 @@ mixin renderResumeItem(item)
         .row.subtitle-row
           div(class=leftSpan)
             span.subtitle!= item.subtitle
+            if(hasLabel)
+              span.visible-phone.label.label-info!= item.label
+              span.label.label-info.hidden-phone!= item.label
           div(class=rightSpan)
             span.hidden-phone.pull-right.date!= item.date
             span.visible-phone.label.date!= item.date
       else
         .row.subtitle-row
           span.subtitle(class=fullSpan)!= item.subtitle
+          if(hasLabel)
+            span.visible-phone.label.label-info!= item.label
+            span.label.label-info.hidden-phone!= item.label
     //- desc-row
     if (hasDesc)
       if (hasDate && !(hasSubtitle) && !(hasTitle))

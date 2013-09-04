@@ -138,8 +138,10 @@ address {
   font-weight: 400;
 }
 .resume-item .label {
-  margin: 0;
+  margin: 0 15px;
   padding: 4px 4px 2px 4px;
+  font-weight: normal;
+  font-style: normal;
 }
 .resume-item .date.label {
   margin: 5px 0;
