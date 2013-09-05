@@ -235,12 +235,25 @@ code {
 // Print styles
 @media print {
   li { margin-left: 20px }
-  h2 { font-size: 24px }
-  h4 { font-size: 16px }
-  body { font-size: 12px }
+  h2 { font-size: 18px }
+  h4 { font-size: 12px }
+  body { font-size: 10px }
+  address { font-size: 12px } 
   .display-name { 
     margin: 25px 0!important;
-    font-size: 40px;
+    font-size: 25px;
+  }
+  .date {
+    float: left;
+  }
+  .place {
+    float: right;
+  }
+  span.visible-phone.label.label-info, span.visible-phone.label.date {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
   }
   .social-media { display: none!important }
   #skillbars { display: none!important }

@@ -14,10 +14,9 @@
         "crowsdurf.io": {
           "id": "crowdsurf.io"
         , "title": "crowdsurf.io "
-        , "label": "Current position"
         , "place": "Providence, RI"
         , "subtitle": "Co-founder and CTO"
-        , "date": "Spring 2013–Present"
+        , "date": "Spring 2013–present"
         , "desc": "<ul><li>Event analytics startup founded with Alex Oberg and Evan Altman in my last semester at Brown</li><li>Back-end development, software architecture, proprietary algorithm design</li><li>Crowdsurf.io is a member of <a href='http://www.betaspring.com/about'>Betaspring’s Fall 2013 session</a>. The program provides seed funding and mentorship for early-stage startups.</li></ul>"
         }
       , "reu": {

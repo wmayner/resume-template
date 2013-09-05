@@ -21,13 +21,11 @@ mixin renderResumeItem(item)
             h4.title!= item.title
           div(class=rightSpan)
             h4.pull-right.hidden-phone.place!= item.place
-          .visible-phone.row.place-row
-            div(class=fullSpan)!= item.place
       else if (hasDate && !(hasSubtitle))
         .row.title-row
           div(class=leftSpan)
             h4.title!= item.title
-              if(hasLabel)
+              if (hasLabel)
                 span.label.label-info.hidden-phone!= item.label
           div(class=rightSpan)
             span.hidden-phone.pull-right.date!= item.date
@@ -50,6 +48,8 @@ mixin renderResumeItem(item)
           div(class=rightSpan)
             span.hidden-phone.pull-right.date!= item.date
             span.visible-phone.label.date!= item.date
+          .visible-phone.row.place-row
+            div.place(class=fullSpan)!= item.place
       else if (hasDate)
         .row.subtitle-row
           div(class=leftSpan)
@@ -60,12 +60,16 @@ mixin renderResumeItem(item)
           div(class=rightSpan)
             span.hidden-phone.pull-right.date!= item.date
             span.visible-phone.label.date!= item.date
+          .visible-phone.row.place-row
+            div.place(class=fullSpan)!= item.place
       else
         .row.subtitle-row
           span.subtitle(class=fullSpan)!= item.subtitle
           if(hasLabel)
             span.visible-phone.label.label-info!= item.label
             span.label.label-info.hidden-phone!= item.label
+          .visible-phone.row.place-row
+            div.place(class=fullSpan)!= item.place
     //- desc-row
     if (hasDesc)
       if (hasDate && !(hasSubtitle) && !(hasTitle))
