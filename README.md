@@ -20,6 +20,8 @@ Then point your browser to [http://localhost:3000][2].
 
 Use `cake dev` for development instead of `node app.js`.
 
+*Note:* `cake dev` requires `cssprefixer`, which isn't bundled with `npm` but can be globally installed with `pip install cssutils`.
+
 Customize it
 ------------
 
