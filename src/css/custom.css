@@ -22,6 +22,19 @@ h4 .badge {
   margin-left: 10px;
   padding: 5px 9px 3px 9px;
 }
+footer {
+  color: #999;
+}
+footer a {
+  color: #999;
+}
+footer a:hover,
+footer a:focus {
+  color: #000000;
+}
+footer a:active {
+  color: #999999;
+}
 ul {
   margin-bottom: 0;
 }

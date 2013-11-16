@@ -13,20 +13,20 @@
     , "items": {
         "crowsdurf.io": {
           "id": "crowdsurf.io"
-        , "title": "crowdsurf.io "
+        , "title": "Crowdsurf.io "
         , "place": "Providence, RI"
         , "subtitle": "Co-founder and CTO"
-        , "date": "Spring 2013–present"
-        , "desc": "<ul><li>Event analytics startup founded with Alex Oberg and Evan Altman in my last semester at Brown</li><li>Back-end development, software architecture, proprietary algorithm design</li><li>Crowdsurf.io is a member of <a href='http://www.betaspring.com/about'>Betaspring’s Fall 2013 session</a>. The program provides seed funding and mentorship for early-stage startups.</li></ul>"
+        , "date": "May–November 2013"
+        , "desc": "<ul><li>Founded Crowdsurf.io to bring sophisticated analytics to the live event industry.</li><li>Designed and implemented software architecture and proprietary algorithms.</li><li>Contributed to product and business development.</li><li>Crowdsurf.io participated in the fall session of <a href='http://www.betaspring.com/about'>Betaspring</a>, a Providence-based accelerator program that provides seed funding and mentorship for early-stage startups.</li></ul>"
         }
       , "reu": {
           "id": "reu"
-        , "title": "<a href='http://math.iit.edu/~openscholar/meshfree/event/reu-iit' target='_blank'>Research Experience for Undergraduates in Computational Mathematics</a>"
+        , "title": "<a href='http://math.iit.edu/~openscholar/meshfree/event/reu-iit' target='_blank'>REU in Computational Mathematics</a>"
         , "website": "http://math.iit.edu/~openscholar/meshfree/event/reu-iit"
         , "place": "Chicago, IL"
         , "subtitle": "Researcher"
         , "date": "Summer 2012"
-        , "desc": "<ul><li>Studied a novel 2-parameter family of kernel functions for data interpolation, under the direction of Greg Fasshauer, Ph.D, Professor of Applied Mathematics at the <a href='http://www.iit.edu/' target='_blank'>Illinois Institute of Technology</a></li><li>Contributed to a code repository of numerical experiments in Matlab</li><li>Conducted theoretical investigations of closed forms for Green&#8217s functions associated with the 2-parameter family</li><li>Presented results at the <a href='http://www.ymc.osu.edu/' target='_blank'>Young Mathematicians Conference</a> at Ohio State University; our abstract was one of 55 accepted out of 110 submitted</li><li>Presented results at the <a href='http://jointmathematicsmeetings.org/' target='_blank'>Joint Mathematics Meetings</a> in San Diego, CA </li><li>Research funded by NSF grant DMS-1115392</li></ul>"
+        , "desc": "<ul><li>Studied a novel 2-parameter family of kernel functions for data interpolation, under the direction of Dr. Greg Fasshauer, Professor of Applied Mathematics at the Illinois Institute of Technology, in the Research Experience for Undergraduates program.</li><li>Contributed to a code repository of numerical experiments in Matlab</li><li>Conducted theoretical investigations of closed forms for Green&#8217s functions associated with the 2-parameter family</li><li>Presented results at:<ul><li>The <a href='http://jointmathematicsmeetings.org/' target='_blank'>Joint Mathematics Meetings 2013 </a> in San Diego, CA </li><li>The <a href='http://www.ymc.osu.edu/' target='_blank'>Young Mathematicians Conference 2012 </a> at Ohio State University; our abstract was one of 55 accepted out of 110 submitted</li><li>Brown's 2013 Symposium for Undergraduates in the Mathematical Sciences</li></ul><li>Research funded by NSF grant DMS-1115392</li></ul>"
         }
       , "penobscot": {
           "id": "penobscot"
@@ -35,7 +35,7 @@
         , "place": "Schaumburg, IL"
         , "subtitle": "Real Estate Management Intern"
         , "date": "June 2011"
-        , "desc": "<ul> <li>Leased apartments and participated in management meetings in the Sales and Management office of a 6-building midrise property</li> <li>Proposed an alteration to one of the buildings on the property that resulted in a $70,000 investment by the owner, with an additional $140,000 allocated for two additional buildings</li> </ul>"
+        , "desc": "<ul><li>Leased apartments and participated in management meetings in the Sales and Management office of a 6-building midrise property</li><li>Proposed an alteration to one of the buildings on the property that resulted in a $70,000 investment by the owner, with an additional $140,000 allocated for two additional buildings</li></ul>"
         }
       }
     }
@@ -50,7 +50,7 @@
         , "place": "Providence, RI"
         , "subtitle": "Sc.B. in Mathematics&#8212;Computer Science"
         , "date": "May, 2013"
-        , "desc": "<span><strong>Relevant Coursework: </strong></span> Modern Web Applications; Artificial Intelligence; Design and Analysis of Algorithms; Multiprocessor Synchronization; Cryptography; Cybersecurity and International Relations; Programming with Data Structures and Algorithms; Models of Computation; Fundamental Problems of Geometry; Combinatorial Topology; Abstract Algebra; and Linear Algebra"
+        , "desc": "<span><strong>Selected Coursework: </strong></span><ul><li>Creating Modern Web Applications</li><li>Laboratory in Computational Cognitive Neuroscience</li><li>Consciousness</li><li>Artificial Intelligence</li><li>Design and Analysis of Algorithms</li><li>Combinatorial Topology</li><li>Neural Modeling Laboratory</li><li>Introduction to Neuroscience</li><li>Multiprocessor Synchronization</li><li>Cryptography</li><li>Programming with Data Structures and Algorithms</li><li>Models of Computation</li><li>Fundamental Problems of Geometry</li><li>Abstract Algebra</li><li>Linear Algebra<li>Cybersecurity and International Relations</li>"
         }
       , "dalton": {
           "id": "dalton"
@@ -58,7 +58,7 @@
         , "website": "http://www.dalton.org/"
         , "place": "New York, NY"
         , "date": "2001&#8211;2009"
-        , "desc": "<ul><li>Member of ACSL Computer Science Team</li><li>National Merit semifinalist</li>"
+        , "desc": "<ul><li>Senior project: <a href='http://www.willmayner.com/mandelbrot'>Mandelbrot Set Explorer</a></li><li>ACSL Computer Science Team</li><li>National Merit semifinalist</li><li>Independent study in jazz orchestration</li>"
         }
       }
     }
@@ -66,10 +66,22 @@
       "id": "projects"
     , "title": "Projects"
     , "items": {
-        "splitr": {
+        "lizwikstrom.com": {
+          "id": "liz"
+        , "label": ""
+        , "title": "<a href='http://lizwikstrom.com'>lizwikstrom.com</a>"
+        , "desc": "A portfolio website for illustrator Liz Wikstrom."
+        }
+      , "simplee": {
+          "id": "simplee"
+        , "label": "Coming soon"
+        , "title": "Simplee"
+        , "desc": "An open-source, Node.js implementation of the Simplex Tree data structure for efficient programmatic representation and manipulation of simplicial complexes."
+      }
+      , "splitr": {
           "id": "splitr"
         , "label": "Coming soon"
-        , "title": "splitr.co"
+        , "title": "Splitr.co"
         , "desc": "A web app to divide things fairly among friends"
         }
       , "paper": {
@@ -91,23 +103,26 @@
     , "title": "Technical Skills"
     , "items": {
         "matlab": {"title": "Matlab", "level": "90"}
+      , "mongodb": {"title": "MongoDB", "level": "70"}
+      , "express": {"title": "Express", "level": "90"}
+      , "angular": {"title": "AngularJS", "level": "60"}
+      , "node": {"title": "Node.js", "level": "85"}
       , "latex": {"title": "LaTeX", "level": "95"}
       , "coffeescript": {"title": "CoffeeScript", "level": "85"}
-      , "git": {"title": "git", "level": "90"}
+      , "git": {"title": "Git", "level": "90"}
       , "vim": {"title": "Vim", "level": "95"}
-      , "node": {"title": "Node.js", "level": "80"}
-      , "express": {"title": "Express", "level": "85"}
-      , "angular": {"title": "Angular.js", "level": "50"}
-      , "css": {"title": "SASS/LESS/CSS", "level": "70"}
-      , "html": {"title": "HTML", "level": "80"}
-      , "jade": {"title": "Jade", "level": "60"}
+      , "jade": {"title": "Jade", "level": "75"}
       , "bootstrap": {"title": "Bootstrap", "level": "80"}
+      , "css": {"title": "Stylus", "level": "85"}
+      , "less": {"title": "Less", "level": "85"}
+      , "sass": {"title": "Sass", "level": "85"}
+      , "css": {"title": "Stylus", "level": "85"}
+      , "html": {"title": "HTML", "level": "90"}
       , "java": {"title": "Java", "level": "65"}
       , "scheme": {"title": "Scheme", "level": "50"}
       , "unix": {"title": "Unix", "level": "80"}
-      , "hg": {"title": "hg", "level": "65"}
+      , "mercurial": {"title": "Mercurial", "level": "65"}
       , "mathematica": {"title": "Mathematica", "level": "40"}
-      , "maple": {"title": "Maple", "level": "60"}
       , "windows": {"title": "Windows", "level": "80"}
       }
     }
@@ -130,8 +145,8 @@
         , "website": "http://www.college-go.org/"
         , "place": "Providence, RI"
         , "subtitle": "Founding Member"
-        , "date": "2010&#8211;present"
-        , "desc": "<ul> <li>Go is the ancient board game of strategy and tactics, believed to be the first board game ever invented, and as yet unconquered by computer programs</li> <li>Helped found the Collegiate Go League, which to date has members from over 7 universities</li> <li>Raised funds and recruited new members</li> <li>Participated in Go tournament at <abbr title='Massachusetts Institute of Technology'>MIT</abbr> in 2010, for the Brown University team</li> <li>Received early support from the <a href='http://www.college-go.org/ing/' target='_blank'>Ing Foundation</a>, whose mission is to promote the spread of Go in Western countries"
+        , "date": "2010&#8211;2013"
+        , "desc": "<ul><li>Helped found the Collegiate Go League, which to date has members from over 7 universities</li> <li>Go is the ancient board game of strategy and tactics, believed to be the first board game ever invented, and as yet unconquered by computer programs</li><li>Raised funds and recruited new members</li> <li>Participated in Go tournament at <abbr title='Massachusetts Institute of Technology'>MIT</abbr> in 2010 for the Brown University Go team</li> <li>Received early support from the <a href='http://www.college-go.org/ing/' target='_blank'>Ing Foundation</a>, whose mission is to promote the spread of Go in Western countries"
         }
       , "winona": {
           "id": "winona"
@@ -149,7 +164,7 @@
     , "items": {
         "piano": {
           "title": "Piano Studies"
-        , "date": "2003&#8211;present"
+        , "date": "2003&#8211;2013"
         , "desc": "<ul> <li>Classical instruction from 2003&#8211;2009</li> <li>Jazz instruction beginning in 2012</li> <li>Performed recitals at Senior Living Centers as community service, 2008&#8211;2009</li></ul>"
         }
       , "harmo": {

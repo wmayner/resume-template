@@ -1,4 +1,4 @@
-My Resumé
+Resume
 =========
 
 Check out the live version [here][1].
