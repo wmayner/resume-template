@@ -80,7 +80,7 @@ a:active {
   margin-top: 30px;
 }
 .social-media img {
-  opacity: 0.8;
+  opacity: 0.6;
   width: 64px;
   height: 64px;
 }
@@ -92,6 +92,8 @@ a:active {
 @media screen and (max-width: 480px) {
   .social-media img {
     margin: 0 2px;
+    height: 48px;
+    width: 48px;
   }
 }
 .social-media a:after {
@@ -122,14 +124,25 @@ address {
   letter-spacing: 0.5em;
   padding: 10px 0px;
   margin-right: -0.5em;
-  margin-bottom: 60px;
-  margin-top: 60px;
+  margin-bottom: 15px;
+  margin-top: 30px;
   line-height: 1.2em;
+}
+@media screen and (max-width: 480px) {
+  .display-name {
+    font-size: 40px;
+  }
 }
 .page-header {
   margin-bottom: 30px;
   margin-top: 20px;
   padding-bottom: 5px;
+}
+@media screen and (max-width: 480px) {
+  .page-header h2 {
+    font-size: 190%;
+    line-height: 110%;
+  }
 }
 .resume-item {
   margin-bottom: 30px;
