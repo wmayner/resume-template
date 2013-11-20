@@ -1,18 +1,19 @@
 // Use Google Web Fonts
-@import url('http://fonts.googleapis.com/css?family=Gentium+Basic|Merriweather:400,400italic,700');
+@import url('http://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:300,400,700|Varela+Round:400');
 
-@bodyFont   : 'Merriweather', Georgia, serif;
-@monoFont   : 'Monaco', monospace;
-@sansFont   : 'Armata', Helvetica, Arial, sans-serif;
+@bodyFont   : 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+@bodyFontWeight: 300;
+@monoFont   : 'Inconsolata', 'Monaco', monospace;
+@sansFont   : 'Helvetica Neue', Helvetica, sans-serif;
 
-@displayFont: 'Gentium Basic', Georgia, serif;
+@displayFont: 'Varela Round', 'Helvetica Neue', Helvetica, sans-serif;
 @nameKerning: 0.5em;
 
 @dateRangeFont  : @bodyFont;
 @dateRangeStyle : italic;
-@dateRangeWeight: 400;
+@dateRangeWeight: 300;
 
-@sectionHeaderFont  : @displayFont;
+@sectionHeaderFont  : @bodyFont;
 @sectionHeaderStyle : normal;
 @sectionHeaderWeight: 400;
 
@@ -54,7 +55,13 @@ section {
 }
 body {
   font-family: @bodyFont;
+  font-weight: @bodyFontWeight;
+  font-size: 16pt;
+  line-height: 100%;
   transition : 0.1s ease;
+}
+ul li {
+    line-height: 140%;
 }
 h2 {
   margin-top   : 0px;
@@ -65,6 +72,7 @@ h2 {
 }
 h4 {
   margin: 0;
+  font-size: 120%;
   font-weight :@itemTitleWeight;
 }
 h4 .badge {
@@ -143,7 +151,7 @@ a {
   }
 }
 address {
-  font-size    : 18px;
+  font-size    : 100%;
   line-height  : 1.5em;
   margin-bottom: 2em;
 }
@@ -191,8 +199,11 @@ address {
   }
   .title {
     font-weight :@itemTitleWeight;
+    font-size: 120%;
+    margin-bottom: 10px;
   }
   .place {
+    font-weight: 300;
     margin: 0;
   }
   // when viewport is large, italicize date ranges and use different font
@@ -215,9 +226,11 @@ address {
   }
   .subtitle-row, .place-row {
     margin-top: 7px;
+    margin-bottom: 10px;
   }
   .subtitle { 
     font-style: italic;
+    font-weight: 400;
   }
   .desc-row {
     .span12, .span8, .span4 {
@@ -253,26 +266,48 @@ code {
 
 // Print styles
 @media print {
-  li { margin-left: 20px }
-  h2 { font-size: 18px }
-  h4 { font-size: 12px }
-  body { font-size: 10px }
-  address { font-size: 12px } 
+  li { margin-left: 20px; }
+  h2 { font-size: 160%; }
+  h4 { font-size: 120%; }
+  body { font-size: 12px; }
+  address { font-size: 100%; } 
   .display-name { 
     margin: 25px 0!important;
-    font-size: 25px;
+    font-size: 200%;
   }
   .date {
     float: left;
   }
   .place {
+    font-weight: 300;
+    margin: 0;
+  }
+  // when viewport is large, italicize date ranges and use different font
+  .date {
+    font-family: @dateRangeFont;
+    font-style : @dateRangeStyle;
+    font-weight: @dateRangeWeight;
+  }
+  .label {
+    margin: 0 15px;
+    padding: 4px 4px 2px 4px;
+    font-weight: normal;
+    font-style: normal;
+  }
+  .date.label {
+    margin: 5px 0;
+  }
+  .label.visible-phone {
+    .date.label
+  }
+  .subtitle-row, .lace {
     float: right;
   }
   span.visible-phone.label.label-info, span.visible-phone.label.date {
     display: inline-block;
     margin: 0px;
     padding: 0px;
-    font-size: 10px;
+    font-size: 100%;
   }
   .social-media { display: none!important }
   #skillbars { display: none!important }

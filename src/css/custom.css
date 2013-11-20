@@ -1,21 +1,28 @@
-@import url('http://fonts.googleapis.com/css?family=Gentium+Basic|Merriweather:400,400italic,700');
+@import url('http://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:300,400,700|Varela+Round:400');
 section {
   padding-top: 40px;
   margin-top: -40px;
 }
 body {
-  font-family: 'Merriweather', Georgia, serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16pt;
+  line-height: 100%;
   transition: 0.1s ease;
+}
+ul li {
+  line-height: 140%;
 }
 h2 {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family: 'Gentium Basic', Georgia, serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 h4 {
   margin: 0;
+  font-size: 120%;
   font-weight: 400;
 }
 h4 .badge {
@@ -103,7 +110,7 @@ a:active {
   opacity: 0.5;
 }
 address {
-  font-size: 18px;
+  font-size: 100%;
   line-height: 1.5em;
   margin-bottom: 2em;
 }
@@ -111,15 +118,15 @@ address {
   text-align: center;
 }
 .sans-font {
-  font-family: 'Armata', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
 .mono-font {
-  font-family: 'Monaco', monospace;
+  font-family: 'Inconsolata', 'Monaco', monospace;
 }
 .display-name {
   text-transform: uppercase;
   color: #000;
-  font-family: 'Gentium Basic', Georgia, serif;
+  font-family: 'Varela Round', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 50px;
   letter-spacing: 0.5em;
   padding: 10px 0px;
@@ -154,14 +161,17 @@ address {
 }
 .resume-item .title {
   font-weight: 400;
+  font-size: 120%;
+  margin-bottom: 10px;
 }
 .resume-item .place {
+  font-weight: 300;
   margin: 0;
 }
 .resume-item .date {
-  font-family: 'Merriweather', Georgia, serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
 }
 .resume-item .label {
   margin: 0 15px;
@@ -178,9 +188,11 @@ address {
 .resume-item .subtitle-row,
 .resume-item .place-row {
   margin-top: 7px;
+  margin-bottom: 10px;
 }
 .resume-item .subtitle {
   font-style: italic;
+  font-weight: 400;
 }
 .resume-item .desc-row .span12,
 .resume-item .desc-row .span8,
@@ -219,25 +231,47 @@ code {
     margin-left: 20px;
   }
   h2 {
-    font-size: 18px;
+    font-size: 160%;
   }
   h4 {
-    font-size: 12px;
+    font-size: 120%;
   }
   body {
-    font-size: 10px;
+    font-size: 12px;
   }
   address {
-    font-size: 12px;
+    font-size: 100%;
   }
   .display-name {
     margin: 25px 0!important;
-    font-size: 25px;
+    font-size: 200%;
   }
   .date {
     float: left;
   }
   .place {
+    font-weight: 300;
+    margin: 0;
+  }
+  .date {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 300;
+  }
+  .label {
+    margin: 0 15px;
+    padding: 4px 4px 2px 4px;
+    font-weight: normal;
+    font-style: normal;
+  }
+  .date.label {
+    margin: 5px 0;
+  }
+  .label.visible-phone {
+    margin: 5px 0;
+  }
+  .subtitle-row,
+  .lace {
     float: right;
   }
   span.visible-phone.label.label-info,
@@ -245,7 +279,7 @@ code {
     display: inline-block;
     margin: 0px;
     padding: 0px;
-    font-size: 10px;
+    font-size: 100%;
   }
   .social-media {
     display: none !important;
