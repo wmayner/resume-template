@@ -32,7 +32,9 @@ app.configure('development', function() {
   return app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
+app.get('*', function(req, res) {
+  return res.redirect("http://www.willmayner.com/resume.html");
+});
 
 http.createServer(app).listen(app.get('port'), function() {
   return console.log("Express server listening on port " + app.get('port'));
