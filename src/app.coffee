@@ -27,8 +27,7 @@ app.configure () ->
 app.configure 'development', () ->
   app.use(express.errorHandler())
 
-app.get '*', (req, res) ->
-  res.redirect("http://www.willmayner.com/resume.html")
+app.get('/', routes.index)
 
 http.createServer(app).listen app.get('port'), () ->
   console.log("Express server listening on port " + app.get('port'))
